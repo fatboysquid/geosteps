@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		984F0C4C1C3C72F100E5AE78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C4B1C3C72F100E5AE78 /* AppDelegate.swift */; };
+		984F0C4E1C3C72F100E5AE78 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C4D1C3C72F100E5AE78 /* MainViewController.swift */; };
+		984F0C511C3C72F100E5AE78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C4F1C3C72F100E5AE78 /* Main.storyboard */; };
+		984F0C531C3C72F100E5AE78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C521C3C72F100E5AE78 /* Assets.xcassets */; };
+		984F0C561C3C72F100E5AE78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C541C3C72F100E5AE78 /* LaunchScreen.storyboard */; };
+		984F0C5E1C3C78DF00E5AE78 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C5D1C3C78DF00E5AE78 /* RegisterViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		984F0C601C3C7EB700E5AE78 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C5F1C3C7EB700E5AE78 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		984F0C621C3C7EF900E5AE78 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C611C3C7EF900E5AE78 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		984F0C641C3DAC8900E5AE78 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F0C631C3DAC8900E5AE78 /* MapKit.framework */; };
+		984F0C661C3DB22400E5AE78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F0C651C3DB22400E5AE78 /* CoreLocation.framework */; };
+		984F0C691C3F0DB400E5AE78 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C681C3F0DB400E5AE78 /* PublicArt.json */; settings = {ASSET_TAGS = (); }; };
+		984F0C6B1C3F126400E5AE78 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C6A1C3F126400E5AE78 /* Artwork.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		984F0C481C3C72F100E5AE78 /* GeoStepz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStepz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		984F0C4B1C3C72F100E5AE78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		984F0C4D1C3C72F100E5AE78 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		984F0C501C3C72F100E5AE78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		984F0C521C3C72F100E5AE78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		984F0C551C3C72F100E5AE78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		984F0C571C3C72F100E5AE78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		984F0C5D1C3C78DF00E5AE78 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		984F0C5F1C3C7EB700E5AE78 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		984F0C611C3C7EF900E5AE78 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		984F0C631C3DAC8900E5AE78 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		984F0C651C3DB22400E5AE78 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		984F0C681C3F0DB400E5AE78 /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
+		984F0C6A1C3F126400E5AE78 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		984F0C451C3C72F100E5AE78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984F0C661C3DB22400E5AE78 /* CoreLocation.framework in Frameworks */,
+				984F0C641C3DAC8900E5AE78 /* MapKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		984F0C3F1C3C72F100E5AE78 = {
+			isa = PBXGroup;
+			children = (
+				984F0C651C3DB22400E5AE78 /* CoreLocation.framework */,
+				984F0C631C3DAC8900E5AE78 /* MapKit.framework */,
+				984F0C4A1C3C72F100E5AE78 /* GeoStepz */,
+				984F0C491C3C72F100E5AE78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		984F0C491C3C72F100E5AE78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				984F0C481C3C72F100E5AE78 /* GeoStepz.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		984F0C4A1C3C72F100E5AE78 /* GeoStepz */ = {
+			isa = PBXGroup;
+			children = (
+				984F0C671C3F0DB400E5AE78 /* supportingFiles */,
+				984F0C4B1C3C72F100E5AE78 /* AppDelegate.swift */,
+				984F0C4D1C3C72F100E5AE78 /* MainViewController.swift */,
+				984F0C4F1C3C72F100E5AE78 /* Main.storyboard */,
+				984F0C521C3C72F100E5AE78 /* Assets.xcassets */,
+				984F0C541C3C72F100E5AE78 /* LaunchScreen.storyboard */,
+				984F0C571C3C72F100E5AE78 /* Info.plist */,
+				984F0C5D1C3C78DF00E5AE78 /* RegisterViewController.swift */,
+				984F0C5F1C3C7EB700E5AE78 /* MapViewController.swift */,
+				984F0C611C3C7EF900E5AE78 /* SettingsViewController.swift */,
+				984F0C6A1C3F126400E5AE78 /* Artwork.swift */,
+			);
+			path = GeoStepz;
+			sourceTree = "<group>";
+		};
+		984F0C671C3F0DB400E5AE78 /* supportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				984F0C681C3F0DB400E5AE78 /* PublicArt.json */,
+			);
+			path = supportingFiles;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		984F0C471C3C72F100E5AE78 /* GeoStepz */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 984F0C5A1C3C72F100E5AE78 /* Build configuration list for PBXNativeTarget "GeoStepz" */;
+			buildPhases = (
+				984F0C441C3C72F100E5AE78 /* Sources */,
+				984F0C451C3C72F100E5AE78 /* Frameworks */,
+				984F0C461C3C72F100E5AE78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoStepz;
+			productName = GeoStepz;
+			productReference = 984F0C481C3C72F100E5AE78 /* GeoStepz.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		984F0C401C3C72F100E5AE78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Sang Lee";
+				TargetAttributes = {
+					984F0C471C3C72F100E5AE78 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = 984F0C431C3C72F100E5AE78 /* Build configuration list for PBXProject "GeoStepz" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 984F0C3F1C3C72F100E5AE78;
+			productRefGroup = 984F0C491C3C72F100E5AE78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				984F0C471C3C72F100E5AE78 /* GeoStepz */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		984F0C461C3C72F100E5AE78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984F0C691C3F0DB400E5AE78 /* PublicArt.json in Resources */,
+				984F0C561C3C72F100E5AE78 /* LaunchScreen.storyboard in Resources */,
+				984F0C531C3C72F100E5AE78 /* Assets.xcassets in Resources */,
+				984F0C511C3C72F100E5AE78 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		984F0C441C3C72F100E5AE78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				984F0C5E1C3C78DF00E5AE78 /* RegisterViewController.swift in Sources */,
+				984F0C4E1C3C72F100E5AE78 /* MainViewController.swift in Sources */,
+				984F0C4C1C3C72F100E5AE78 /* AppDelegate.swift in Sources */,
+				984F0C621C3C7EF900E5AE78 /* SettingsViewController.swift in Sources */,
+				984F0C6B1C3F126400E5AE78 /* Artwork.swift in Sources */,
+				984F0C601C3C7EB700E5AE78 /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		984F0C4F1C3C72F100E5AE78 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				984F0C501C3C72F100E5AE78 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		984F0C541C3C72F100E5AE78 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				984F0C551C3C72F100E5AE78 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		984F0C581C3C72F100E5AE78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		984F0C591C3C72F100E5AE78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		984F0C5B1C3C72F100E5AE78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoStepz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arsang.GeoStepz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		984F0C5C1C3C72F100E5AE78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GeoStepz/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arsang.GeoStepz;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		984F0C431C3C72F100E5AE78 /* Build configuration list for PBXProject "GeoStepz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984F0C581C3C72F100E5AE78 /* Debug */,
+				984F0C591C3C72F100E5AE78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		984F0C5A1C3C72F100E5AE78 /* Build configuration list for PBXNativeTarget "GeoStepz" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				984F0C5B1C3C72F100E5AE78 /* Debug */,
+				984F0C5C1C3C72F100E5AE78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 984F0C401C3C72F100E5AE78 /* Project object */;
+}
