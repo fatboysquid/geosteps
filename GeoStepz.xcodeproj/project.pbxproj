@@ -12,13 +12,13 @@
 		984F0C511C3C72F100E5AE78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C4F1C3C72F100E5AE78 /* Main.storyboard */; };
 		984F0C531C3C72F100E5AE78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C521C3C72F100E5AE78 /* Assets.xcassets */; };
 		984F0C561C3C72F100E5AE78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C541C3C72F100E5AE78 /* LaunchScreen.storyboard */; };
-		984F0C5E1C3C78DF00E5AE78 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C5D1C3C78DF00E5AE78 /* RegisterViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		984F0C601C3C7EB700E5AE78 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C5F1C3C7EB700E5AE78 /* MapViewController.swift */; settings = {ASSET_TAGS = (); }; };
-		984F0C621C3C7EF900E5AE78 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C611C3C7EF900E5AE78 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		984F0C5E1C3C78DF00E5AE78 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C5D1C3C78DF00E5AE78 /* RegisterViewController.swift */; };
+		984F0C601C3C7EB700E5AE78 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C5F1C3C7EB700E5AE78 /* MapViewController.swift */; };
+		984F0C621C3C7EF900E5AE78 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C611C3C7EF900E5AE78 /* SettingsViewController.swift */; };
 		984F0C641C3DAC8900E5AE78 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F0C631C3DAC8900E5AE78 /* MapKit.framework */; };
 		984F0C661C3DB22400E5AE78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F0C651C3DB22400E5AE78 /* CoreLocation.framework */; };
-		984F0C691C3F0DB400E5AE78 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C681C3F0DB400E5AE78 /* PublicArt.json */; settings = {ASSET_TAGS = (); }; };
-		984F0C6B1C3F126400E5AE78 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C6A1C3F126400E5AE78 /* Artwork.swift */; settings = {ASSET_TAGS = (); }; };
+		984F0C691C3F0DB400E5AE78 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C681C3F0DB400E5AE78 /* PublicArt.json */; };
+		984F0C6B1C3F126400E5AE78 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C6A1C3F126400E5AE78 /* Artwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,6 +121,7 @@
 		984F0C401C3C72F100E5AE78 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Sang Lee";
 				TargetAttributes = {
@@ -283,9 +284,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GeoStepz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arsang.GeoStepz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -294,9 +297,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GeoStepz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arsang.GeoStepz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
