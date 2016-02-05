@@ -38,10 +38,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CNk-nH-wRG">
-                                <rect key="frame" x="70" y="244" width="38" height="30"/>
-                                <state key="normal" title="Login"/>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZAn-Nb-623">
                                 <rect key="frame" x="241" y="20" width="52" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -51,6 +47,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HMQ-Ap-73N">
                                 <rect key="frame" x="70" y="307" width="334" height="30"/>
                                 <state key="normal" title="Not a member yet? Register here (not set up yet)"/>
+                                <connections>
+                                    <segue destination="zfO-Vk-flz" kind="show" id="6zM-il-vUA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Le-1m-E2N">
+                                <rect key="frame" x="74" y="251" width="38" height="30"/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <segue destination="dSc-pg-sOx" kind="show" id="MZZ-AX-67C"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -159,14 +165,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OM-fL-EPF">
                                 <rect key="frame" x="69" y="342" width="57" height="30"/>
                                 <state key="normal" title="Register"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EDZ-7m-bCG">
-                                <rect key="frame" x="69" y="513" width="430" height="30"/>
-                                <state key="normal" title="Clicking this emulates a successful registration (not set up yet)"/>
+                                <connections>
+                                    <segue destination="82D-rz-VDg" kind="show" id="Icz-WC-jUX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dud-P8-x7R">
                                 <rect key="frame" x="70" y="380" width="321" height="30"/>
                                 <state key="normal" title="Already a member? Log in here (not set up yet)"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="msJ-Z1-b7l"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -246,6 +254,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Nnd-ZI-IQv"/>
+        <segue reference="6zM-il-vUA"/>
+        <segue reference="msJ-Z1-b7l"/>
+        <segue reference="Icz-WC-jUX"/>
+        <segue reference="nO1-gm-CzO"/>
     </inferredMetricsTieBreakers>
 </document>
