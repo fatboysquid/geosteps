@@ -22,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2548262C1C6D987D0034F49D /* GrandCentralGlendale.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GrandCentralGlendale.gpx; sourceTree = "<group>"; };
+		2548262D1C6D98A70034F49D /* GranvilleBurbank.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GranvilleBurbank.gpx; sourceTree = "<group>"; };
+		2548262E1C6D9A3F0034F49D /* LocationChangeEmulation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationChangeEmulation.gpx; sourceTree = "<group>"; };
 		259436E01C645ED300490414 /* YourProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		259436E11C6464E700490414 /* LosAngeles.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LosAngeles.gpx; sourceTree = "<group>"; };
 		984F0C481C3C72F100E5AE78 /* GeoStepz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStepz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +90,9 @@
 				984F0C571C3C72F100E5AE78 /* Info.plist */,
 				984F0C6A1C3F126400E5AE78 /* Artwork.swift */,
 				259436E01C645ED300490414 /* YourProject-Bridging-Header.h */,
+				2548262C1C6D987D0034F49D /* GrandCentralGlendale.gpx */,
+				2548262D1C6D98A70034F49D /* GranvilleBurbank.gpx */,
+				2548262E1C6D9A3F0034F49D /* LocationChangeEmulation.gpx */,
 			);
 			path = GeoStepz;
 			sourceTree = "<group>";
