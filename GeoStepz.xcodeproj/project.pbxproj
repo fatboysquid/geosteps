@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		259195901C83CC7400A6CBC9 /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2591958F1C83CC7400A6CBC9 /* TripsViewController.swift */; };
 		984F0C4C1C3C72F100E5AE78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C4B1C3C72F100E5AE78 /* AppDelegate.swift */; };
 		984F0C4E1C3C72F100E5AE78 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C4D1C3C72F100E5AE78 /* SignInViewController.swift */; };
 		984F0C511C3C72F100E5AE78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C4F1C3C72F100E5AE78 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 		2548262C1C6D987D0034F49D /* GrandCentralGlendale.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GrandCentralGlendale.gpx; sourceTree = "<group>"; };
 		2548262D1C6D98A70034F49D /* GranvilleBurbank.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GranvilleBurbank.gpx; sourceTree = "<group>"; };
 		2548262E1C6D9A3F0034F49D /* LocationChangeEmulation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationChangeEmulation.gpx; sourceTree = "<group>"; };
+		2591958F1C83CC7400A6CBC9 /* TripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		259436E01C645ED300490414 /* YourProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		259436E11C6464E700490414 /* LosAngeles.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LosAngeles.gpx; sourceTree = "<group>"; };
 		984F0C481C3C72F100E5AE78 /* GeoStepz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStepz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 				984F0C4D1C3C72F100E5AE78 /* SignInViewController.swift */,
 				984F0C5D1C3C78DF00E5AE78 /* RegisterViewController.swift */,
 				984F0C5F1C3C7EB700E5AE78 /* MapViewController.swift */,
+				2591958F1C83CC7400A6CBC9 /* TripsViewController.swift */,
 				259436E11C6464E700490414 /* LosAngeles.gpx */,
 				984F0C611C3C7EF900E5AE78 /* SettingsViewController.swift */,
 				984F0C4F1C3C72F100E5AE78 /* Main.storyboard */,
@@ -177,6 +180,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				259195901C83CC7400A6CBC9 /* TripsViewController.swift in Sources */,
 				984F0C5E1C3C78DF00E5AE78 /* RegisterViewController.swift in Sources */,
 				984F0C4E1C3C72F100E5AE78 /* SignInViewController.swift in Sources */,
 				984F0C4C1C3C72F100E5AE78 /* AppDelegate.swift in Sources */,

@@ -13,11 +13,31 @@ import MapKit
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var locationManager: CLLocationManager!
     var locationsVisited = [[CLLocation]]()
+    var trips = [[[CLLocation]]]()
+    var recording = false
     let regionRadius: CLLocationDistance = 1000
     
-    @IBOutlet weak var distanceReading: UILabel!
+    //@IBOutlet weak var distanceReading: UILabel!
     @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var startRecordingButton: UIButton!
     
+    @IBAction func startRecording(sender: AnyObject) {
+        recording = !recording;
+        startRecordingButton.setTitle(recording ? "STOP RECORDING" : "START RECORDING", forState: .Normal)
+        if (recording) {
+            locationManager.startUpdatingLocation()
+        } else {
+            locationManager.stopUpdatingLocation()
+            trips.append(locationsVisited)
+            print("locations visited count: ")
+            print(locationsVisited.count)
+            locationsVisited = []
+            
+            print(trips.count)
+            print(trips)
+        }
+        print(recording)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +46,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.map.delegate = self
         locationManager.distanceFilter = 15
         locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
         print("viewDidLoad")
         view.backgroundColor = UIColor.grayColor()
     }
@@ -67,7 +86,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print("didUpdateLocations")
         locationsVisited.append(locations)
+        focusOnUpdatedLocation(locations)
         createPolyline(map)
+    }
+    
+    func focusOnUpdatedLocation(location: [CLLocation]) {
+        let coordinate = location[0].coordinate;
+        let center = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
+    
+        self.map.setRegion(region, animated: true)
     }
     
     func startScanning() {
@@ -86,19 +114,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             switch distance {
             case .Unknown:
                 self.view.backgroundColor = UIColor.grayColor()
-                self.distanceReading.text = "UNKNOWN"
+                //self.distanceReading.text = "UNKNOWN"
                 
             case .Far:
                 self.view.backgroundColor = UIColor.blueColor()
-                self.distanceReading.text = "FAR"
+                //self.distanceReading.text = "FAR"
                 
             case .Near:
                 self.view.backgroundColor = UIColor.orangeColor()
-                self.distanceReading.text = "NEAR"
+                //self.distanceReading.text = "NEAR"
                 
             case .Immediate:
                 self.view.backgroundColor = UIColor.redColor()
-                self.distanceReading.text = "RIGHT HERE"
+                //self.distanceReading.text = "RIGHT HERE"
             }
         }
     }
@@ -112,10 +140,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             print(i[0].coordinate.dynamicType)
         }
 
-        weak var geodesicPolyline = MKGeodesicPolyline(coordinates: &locationsVisitedCoordinates, count: locationsVisitedCoordinates.count)
+        weak var polylinePathOverlay: MKGeodesicPolyline? = MKGeodesicPolyline(coordinates: &locationsVisitedCoordinates, count: locationsVisitedCoordinates.count)
+        map.removeOverlays(map.overlays)
 
-        if (geodesicPolyline != nil) {
-            map.addOverlay(geodesicPolyline!)
+        if (polylinePathOverlay != nil) {
+            print("should have removed")
+            map.addOverlay(polylinePathOverlay!)
         }
     }
     
