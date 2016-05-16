@@ -12,29 +12,39 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var locationManager: CLLocationManager!
-    var locationsVisited = [[CLLocation]]()
-    var trips = [[[CLLocation]]]()
+    //var locationsVisited = [[CLLocation]]()
+    //var trips = [[[CLLocation]]]()
+    //var tripsManager = TripsManager.tripsManager
+    var trips = TripsManager.getTrips()
+    var currentTrip: Trip? = nil
     var recording = false
     let regionRadius: CLLocationDistance = 1000
     
     //@IBOutlet weak var distanceReading: UILabel!
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var startRecordingButton: UIButton!
-    
+
     @IBAction func startRecording(sender: AnyObject) {
         recording = !recording;
         startRecordingButton.setTitle(recording ? "STOP RECORDING" : "START RECORDING", forState: .Normal)
         if (recording) {
             locationManager.startUpdatingLocation()
+            if (currentTrip == nil) {
+                print("currentTrip was nil")
+                currentTrip = Trip()
+                print("created a new trip: ")
+                print(currentTrip)
+            }
         } else {
             locationManager.stopUpdatingLocation()
-            trips.append(locationsVisited)
+            //trips.append(locationsVisited)
+            //currentTrip?.addCLLocation(<#T##cllocation: [CLLocation]##[CLLocation]#>)
             print("locations visited count: ")
-            print(locationsVisited.count)
-            locationsVisited = []
-            
-            print(trips.count)
-            print(trips)
+            TripsManager.addTrip(currentTrip!)
+            //print(locationsVisited.count)
+            //locationsVisited = []
+            //print(trips.count)
+            //print(trips)
         }
         print(recording)
     }
@@ -48,6 +58,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.requestAlwaysAuthorization()
         print("viewDidLoad")
         view.backgroundColor = UIColor.grayColor()
+
+            //let dbStubDataJSON = "[{\"id\":\"2982938\",\"title\":\"Las Vegas\",\"description\":\"Spring break 2016!\",\"locations\":[[\"serializedCLLocationData1\",\"serializedCLLocationData2\"]],\"datetime\":\"April 20, 2016\",\"comments\":[{\"id\":\"12345\",\"datetime\":\"April 20, 2016\",\"avatar\":\"http://geosnapscdn.com/somepath\",\"body\":\"Nice trip!\"}],\"photos\":[\"http://geosnapscdn.com/somepath\",\"http://geosnapscdn.com/somepath\"]},{\"id\":\"2922938\",\"title\":\"New York\",\"description\":\"Bachelor party!\",\"locations\":[[\"serializedCLLocationData1\",\"serializedCLLocationData2\"]],\"datetime\":\"April 25, 2016\",\"comments\":[{\"id\":\"67890\",\"datetime\":\"April 25, 2016\",\"avatar\":\"http://geosnapscdn.com/somepath\",\"body\":\"Nice trip!\"}],\"photos\":[\"http://geosnapscdn.com/somepath\",\"http://geosnapscdn.com/somepath\"]}]"
+        //print(TripsManager.tripsManager.convertJSONToDictionary(dbStubDataJSON))
     }
     
     override func didReceiveMemoryWarning() {
@@ -82,11 +95,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         print("didFailWithError")
         print(error)
     }
-    
-    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+
+    func locationManager(manager: CLLocationManager, didUpdateLocations cllocation: [CLLocation]) {
         print("didUpdateLocations")
-        locationsVisited.append(locations)
-        focusOnUpdatedLocation(locations)
+        let location = Location(cllocation: cllocation)
+        currentTrip?.addLocation(location)
+        //locationsVisited.append(locations)
+        focusOnUpdatedLocation(cllocation)
         createPolyline(map)
     }
     
@@ -133,14 +148,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func createPolyline(mapView: MKMapView) {
         print("createPolyline")
-        var locationsVisitedCoordinates = [CLLocationCoordinate2D]()
+        var locationCoordinates = [CLLocationCoordinate2D]()
+        let locations = currentTrip?.getLocations()
 
-        for i in locationsVisited {
-            locationsVisitedCoordinates.append(i[0].coordinate)
-            print(i[0].coordinate.dynamicType)
+        for i in locations! {
+            let locationCoordinate = i.getCLLocation()[0].coordinate
+            locationCoordinates.append(locationCoordinate)
+            print(locationCoordinate.dynamicType)
         }
 
-        weak var polylinePathOverlay: MKGeodesicPolyline? = MKGeodesicPolyline(coordinates: &locationsVisitedCoordinates, count: locationsVisitedCoordinates.count)
+        weak var polylinePathOverlay: MKGeodesicPolyline? = MKGeodesicPolyline(coordinates: &locationCoordinates, count: locationCoordinates.count)
         map.removeOverlays(map.overlays)
 
         if (polylinePathOverlay != nil) {
