@@ -273,6 +273,29 @@
             </objects>
             <point key="canvasLocation" x="2304" y="1337"/>
         </scene>
+        <!--Trip Detail View Controller-->
+        <scene sceneID="xPW-Jg-WpV">
+            <objects>
+                <viewController id="MwD-eY-RlG" customClass="TripDetailViewController" customModule="GeoStepz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="c3I-d4-Een"/>
+                        <viewControllerLayoutGuide type="bottom" id="i9q-qx-eC2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2hy-Hs-fxl">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Nvl-Lp-5Hx" userLabel="Map">
+                                <rect key="frame" x="38" y="78" width="430" height="419"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ypi-Fc-4Ok" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2314" y="2164"/>
+        </scene>
         <!--Intro Controller-->
         <scene sceneID="bh1-dq-kw8">
             <objects>
@@ -305,40 +328,73 @@
                     </tabBar>
                     <connections>
                         <segue destination="82D-rz-VDg" kind="relationship" relationship="viewControllers" id="VN3-jE-C8o"/>
+                        <segue destination="si4-gm-U0l" kind="relationship" relationship="viewControllers" id="CsV-Ta-mSQ"/>
                         <segue destination="Dwu-P6-IqW" kind="relationship" relationship="viewControllers" id="U3f-zh-0gI"/>
-                        <segue destination="Kks-3h-PAd" kind="relationship" relationship="viewControllers" id="wLf-te-K3t"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9t-Vx-HYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="633" y="1337"/>
         </scene>
-        <!--Trips-->
-        <scene sceneID="f02-ie-oBc">
+        <!--Trips View Controller-->
+        <scene sceneID="PHM-Qj-5M5">
             <objects>
-                <viewController id="Kks-3h-PAd" customClass="TripsViewController" customModule="GeoStepz" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="hu5-9b-N8b"/>
-                        <viewControllerLayoutGuide type="bottom" id="YCT-hL-y83"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="yNK-0z-2jZ">
+                <tableViewController id="sUy-jq-FtA" userLabel="Trips View Controller" customClass="TripsViewController" customModule="GeoStepz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="8JA-aK-8K8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trips" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dIR-YP-kpy">
-                                <rect key="frame" x="35" y="28" width="38" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Trips" id="WOs-mo-Oip"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Umb-m4-Ge3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="tripcell" textLabel="WIg-46-szC" style="IBUITableViewCellStyleDefault" id="LI4-1U-pnU">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LI4-1U-pnU" id="CAC-ns-eBL">
+                                    <rect key="frame" x="0.0" y="0.0" width="553" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WIg-46-szC">
+                                            <rect key="frame" x="15" y="0.0" width="538" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sUy-jq-FtA" id="xbp-AH-Qgc"/>
+                            <outlet property="delegate" destination="sUy-jq-FtA" id="VB8-2W-wE8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="fgg-9j-bKV"/>
+                    <connections>
+                        <segue destination="MwD-eY-RlG" kind="show" identifier="tripDetail" id="cc8-Qf-1GR"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2R-7k-869" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="625" y="2078"/>
+            <point key="canvasLocation" x="1445" y="2138"/>
+        </scene>
+        <!--Trips-->
+        <scene sceneID="Tx4-ED-CmE">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="si4-gm-U0l" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Trips" id="aeR-Xz-US8" userLabel="Trips"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eop-5b-29e">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sUy-jq-FtA" kind="relationship" relationship="rootViewController" id="yYC-rf-Zm0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lDm-ZO-ah2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="2138"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

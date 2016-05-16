@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GeoStepz/MapViewController.swift"
-            timestampString = "478398303.332268"
+            timestampString = "485061227.646348"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "MapViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -47,6 +47,99 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeoStepz/TripDetailViewController.swift"
+            timestampString = "481595855.635019"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoStepz.TripDetailViewController.locationsVisited.getter : Swift.Array&lt;Swift.Array&lt;ObjectiveC.CLLocation&gt;&gt;"
+                  moduleName = "GeoStepz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aabcaria/geosteps/GeoStepz/TripDetailViewController.swift"
+                  timestampString = "481595724.92119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoStepz.TripDetailViewController.locationsVisited.setter : Swift.Array&lt;Swift.Array&lt;ObjectiveC.CLLocation&gt;&gt;"
+                  moduleName = "GeoStepz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aabcaria/geosteps/GeoStepz/TripDetailViewController.swift"
+                  timestampString = "481595724.922994"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoStepz.TripDetailViewController.locationsVisited.materializeForSet : Swift.Array&lt;Swift.Array&lt;ObjectiveC.CLLocation&gt;&gt;"
+                  moduleName = "GeoStepz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aabcaria/geosteps/GeoStepz/TripDetailViewController.swift"
+                  timestampString = "481595724.923264"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoStepz.TripDetailViewController.init (GeoStepz.TripDetailViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; GeoStepz.TripDetailViewController"
+                  moduleName = "GeoStepz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aabcaria/geosteps/GeoStepz/TripDetailViewController.swift"
+                  timestampString = "481595724.923444"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeoStepz.TripDetailViewController.init (GeoStepz.TripDetailViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Swift.Optional&lt;GeoStepz.TripDetailViewController&gt;"
+                  moduleName = "GeoStepz"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/aabcaria/geosteps/GeoStepz/TripDetailViewController.swift"
+                  timestampString = "481595724.923645"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
