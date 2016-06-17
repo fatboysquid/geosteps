@@ -22,26 +22,38 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var stopRecordingButton: UIButton!
 
     @IBAction func stopButton(sender: UIButton) {
-        TripsManager.addTrip(currentTrip!)
+        print("stopButton button clicked")
+        // a trip must consist of at least two locations
+        if (currentTrip?.getLocations().count > 1) {
+            print("trip consists of \(currentTrip?.getLocations().count) locations; adding...")
+            TripsManager.addTrip(currentTrip!)
+        }
+
         map.removeOverlays(map.overlays)
         currentTrip = nil
+        recording = false
         stopRecordingButton.enabled = false
         startRecordingButton.setTitle("Start Trip", forState: .Normal)
     }
     @IBAction func startRecording(sender: AnyObject) {
-        recording = !recording;
+        print("startRecording button clicked")
         stopRecordingButton.enabled = true
 
         // record button pressed
-        if (recording) {
+        if (!recording) {
+            print("recording = true")
+            recording = true
             locationManager.startUpdatingLocation()
             startRecordingButton.setTitle("Pause", forState: .Normal)
 
             if (currentTrip == nil) {
+                print("currentTrip was nil, so creating one...")
                 currentTrip = Trip()
             }
         // pause button pressed
         } else {
+            print("recording = false")
+            recording = false
             locationManager.stopUpdatingLocation()
             startRecordingButton.setTitle("Continue", forState: .Normal)
         }

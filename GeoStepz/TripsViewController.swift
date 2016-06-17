@@ -16,6 +16,7 @@ class TripsViewController : UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = false
+        self.tableView.reloadData()
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -31,7 +32,6 @@ class TripsViewController : UITableViewController {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //let trips = TripsManager.getTrips()
         self.tabBarController?.tabBar.hidden = true
         self.performSegueWithIdentifier("tripDetail", sender: indexPath.row)
     }
