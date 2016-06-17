@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2513E8431D13C2380082DE52 /* Eagle Rock - Spitz.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2513E8421D13C2380082DE52 /* Eagle Rock - Spitz.gpx */; };
+		2513E8451D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2513E8441D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx */; };
+		2513E8471D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2513E8461D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx */; };
 		254B94851C9620DF0013ADCB /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94841C9620DF0013ADCB /* TripsViewController.swift */; };
 		254B94871C96260B0013ADCB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94861C96260B0013ADCB /* Trip.swift */; };
 		254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94881C962CCF0013ADCB /* TripsManager.swift */; };
@@ -27,8 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2548262C1C6D987D0034F49D /* GrandCentralGlendale.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GrandCentralGlendale.gpx; sourceTree = "<group>"; };
-		2548262D1C6D98A70034F49D /* GranvilleBurbank.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GranvilleBurbank.gpx; sourceTree = "<group>"; };
+		2513E8421D13C2380082DE52 /* Eagle Rock - Spitz.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Eagle Rock - Spitz.gpx"; sourceTree = "<group>"; };
+		2513E8441D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Studio City - Midori Sushi.gpx"; sourceTree = "<group>"; };
+		2513E8461D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Northridge - Gen Korean BBQ.gpx"; sourceTree = "<group>"; };
+		2548262C1C6D987D0034F49D /* Glendale - Grand Central.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Glendale - Grand Central.gpx"; sourceTree = "<group>"; };
+		2548262D1C6D98A70034F49D /* Burbank - Granville Cafe.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Burbank - Granville Cafe.gpx"; sourceTree = "<group>"; };
 		2548262E1C6D9A3F0034F49D /* LocationChangeEmulation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationChangeEmulation.gpx; sourceTree = "<group>"; };
 		254B94841C9620DF0013ADCB /* TripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		254B94861C96260B0013ADCB /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -102,9 +108,12 @@
 				984F0C571C3C72F100E5AE78 /* Info.plist */,
 				984F0C6A1C3F126400E5AE78 /* Artwork.swift */,
 				259436E01C645ED300490414 /* YourProject-Bridging-Header.h */,
-				2548262C1C6D987D0034F49D /* GrandCentralGlendale.gpx */,
-				2548262D1C6D98A70034F49D /* GranvilleBurbank.gpx */,
 				2548262E1C6D9A3F0034F49D /* LocationChangeEmulation.gpx */,
+				2548262D1C6D98A70034F49D /* Burbank - Granville Cafe.gpx */,
+				2513E8421D13C2380082DE52 /* Eagle Rock - Spitz.gpx */,
+				2548262C1C6D987D0034F49D /* Glendale - Grand Central.gpx */,
+				2513E8461D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx */,
+				2513E8441D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx */,
 				2598630D1CE95B83000A3BC3 /* Location.swift */,
 				254B94861C96260B0013ADCB /* Trip.swift */,
 				254B94881C962CCF0013ADCB /* TripsManager.swift */,
@@ -178,9 +187,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2513E8451D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx in Resources */,
+				2513E8431D13C2380082DE52 /* Eagle Rock - Spitz.gpx in Resources */,
 				984F0C691C3F0DB400E5AE78 /* PublicArt.json in Resources */,
 				984F0C561C3C72F100E5AE78 /* LaunchScreen.storyboard in Resources */,
 				984F0C531C3C72F100E5AE78 /* Assets.xcassets in Resources */,
+				2513E8471D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx in Resources */,
 				25C6C2981CB48E9B009CE38F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
