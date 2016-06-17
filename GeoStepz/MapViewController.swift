@@ -12,57 +12,55 @@ import MapKit
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     var locationManager: CLLocationManager!
-    //var locationsVisited = [[CLLocation]]()
-    //var trips = [[[CLLocation]]]()
-    //var tripsManager = TripsManager.tripsManager
     var trips = TripsManager.getTrips()
     var currentTrip: Trip? = nil
     var recording = false
     let regionRadius: CLLocationDistance = 1000
-    
-    //@IBOutlet weak var distanceReading: UILabel!
+
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var startRecordingButton: UIButton!
+    @IBOutlet weak var stopRecordingButton: UIButton!
 
+    @IBAction func stopButton(sender: UIButton) {
+        TripsManager.addTrip(currentTrip!)
+        map.removeOverlays(map.overlays)
+        currentTrip = nil
+        stopRecordingButton.enabled = false
+        startRecordingButton.setTitle("Start Trip", forState: .Normal)
+    }
     @IBAction func startRecording(sender: AnyObject) {
         recording = !recording;
-        startRecordingButton.setTitle(recording ? "STOP RECORDING" : "START RECORDING", forState: .Normal)
+        stopRecordingButton.enabled = true
+
+        // record button pressed
         if (recording) {
             locationManager.startUpdatingLocation()
+            startRecordingButton.setTitle("Pause", forState: .Normal)
+
             if (currentTrip == nil) {
-                print("currentTrip was nil")
                 currentTrip = Trip()
-                print("created a new trip: ")
-                print(currentTrip)
             }
+        // pause button pressed
         } else {
             locationManager.stopUpdatingLocation()
-            //trips.append(locationsVisited)
-            //currentTrip?.addCLLocation(<#T##cllocation: [CLLocation]##[CLLocation]#>)
-            print("locations visited count: ")
-            TripsManager.addTrip(currentTrip!)
-            //print(locationsVisited.count)
-            //locationsVisited = []
-            //print(trips.count)
-            //print(trips)
+            startRecordingButton.setTitle("Continue", forState: .Normal)
         }
-        print(recording)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("viewDidLoad")
         locationManager = CLLocationManager()
         locationManager.delegate = self
         self.map.delegate = self
         locationManager.distanceFilter = 15
         locationManager.requestAlwaysAuthorization()
-        print("viewDidLoad")
         view.backgroundColor = UIColor.grayColor()
+        stopRecordingButton.enabled = false
 
             //let dbStubDataJSON = "[{\"id\":\"2982938\",\"title\":\"Las Vegas\",\"description\":\"Spring break 2016!\",\"locations\":[[\"serializedCLLocationData1\",\"serializedCLLocationData2\"]],\"datetime\":\"April 20, 2016\",\"comments\":[{\"id\":\"12345\",\"datetime\":\"April 20, 2016\",\"avatar\":\"http://geosnapscdn.com/somepath\",\"body\":\"Nice trip!\"}],\"photos\":[\"http://geosnapscdn.com/somepath\",\"http://geosnapscdn.com/somepath\"]},{\"id\":\"2922938\",\"title\":\"New York\",\"description\":\"Bachelor party!\",\"locations\":[[\"serializedCLLocationData1\",\"serializedCLLocationData2\"]],\"datetime\":\"April 25, 2016\",\"comments\":[{\"id\":\"67890\",\"datetime\":\"April 25, 2016\",\"avatar\":\"http://geosnapscdn.com/somepath\",\"body\":\"Nice trip!\"}],\"photos\":[\"http://geosnapscdn.com/somepath\",\"http://geosnapscdn.com/somepath\"]}]"
         //print(TripsManager.tripsManager.convertJSONToDictionary(dbStubDataJSON))
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
