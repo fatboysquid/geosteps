@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qQq-5O-dpU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qQq-5O-dpU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -354,7 +354,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="detailButton" indentationWidth="10" reuseIdentifier="tripcell" textLabel="WIg-46-szC" style="IBUITableViewCellStyleDefault" id="LI4-1U-pnU">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LI4-1U-pnU" id="CAC-ns-eBL">
                                     <rect key="frame" x="0.0" y="0.0" width="553" height="43.5"/>
@@ -378,7 +378,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="fgg-9j-bKV"/>
                     <connections>
-                        <segue destination="MwD-eY-RlG" kind="show" identifier="tripDetail" id="cc8-Qf-1GR"/>
+                        <segue destination="MwD-eY-RlG" kind="show" identifier="tripDetailSegue" id="cc8-Qf-1GR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c2R-7k-869" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -406,9 +406,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Icz-WC-jUX"/>
-        <segue reference="6zM-il-vUA"/>
-        <segue reference="msJ-Z1-b7l"/>
-        <segue reference="MZZ-AX-67C"/>
+        <segue reference="VN3-jE-C8o"/>
+        <segue reference="Nnd-ZI-IQv"/>
+        <segue reference="vSC-Dp-jKI"/>
+        <segue reference="n7R-TN-NGc"/>
     </inferredMetricsTieBreakers>
 </document>

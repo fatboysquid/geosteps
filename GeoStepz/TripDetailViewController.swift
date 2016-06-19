@@ -11,8 +11,13 @@ import CoreLocation
 import MapKit
 
 class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
-
+    var currentTrip:Trip?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let unWrappedTrip = currentTrip {
+            print("here is the current trip")
+            print(unWrappedTrip)
+        }
     }
 }
