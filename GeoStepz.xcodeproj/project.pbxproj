@@ -15,6 +15,7 @@
 		254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94881C962CCF0013ADCB /* TripsManager.swift */; };
 		257573291CB4878300B05DDD /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257573281CB4878300B05DDD /* TripDetailViewController.swift */; };
 		2598630E1CE95B83000A3BC3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2598630D1CE95B83000A3BC3 /* Location.swift */; };
+		25C42BC41D176D4700668518 /* MapsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C42BC31D176D4700668518 /* MapsHelper.swift */; };
 		25C6C2981CB48E9B009CE38F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C4F1C3C72F100E5AE78 /* Main.storyboard */; };
 		984F0C4C1C3C72F100E5AE78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C4B1C3C72F100E5AE78 /* AppDelegate.swift */; };
 		984F0C4E1C3C72F100E5AE78 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C4D1C3C72F100E5AE78 /* SignInViewController.swift */; };
@@ -43,6 +44,7 @@
 		259436E01C645ED300490414 /* YourProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		259436E11C6464E700490414 /* LosAngeles.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LosAngeles.gpx; sourceTree = "<group>"; };
 		2598630D1CE95B83000A3BC3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		25C42BC31D176D4700668518 /* MapsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsHelper.swift; sourceTree = "<group>"; };
 		984F0C481C3C72F100E5AE78 /* GeoStepz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStepz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		984F0C4B1C3C72F100E5AE78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		984F0C4D1C3C72F100E5AE78 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		255405651D1770AC003441DB /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				25C42BC31D176D4700668518 /* MapsHelper.swift */,
+			);
+			name = helpers;
+			sourceTree = "<group>";
+		};
 		984F0C3F1C3C72F100E5AE78 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +103,7 @@
 		984F0C4A1C3C72F100E5AE78 /* GeoStepz */ = {
 			isa = PBXGroup;
 			children = (
+				255405651D1770AC003441DB /* helpers */,
 				984F0C671C3F0DB400E5AE78 /* supportingFiles */,
 				984F0C4B1C3C72F100E5AE78 /* AppDelegate.swift */,
 				984F0C4D1C3C72F100E5AE78 /* SignInViewController.swift */,
@@ -206,6 +217,7 @@
 			files = (
 				257573291CB4878300B05DDD /* TripDetailViewController.swift in Sources */,
 				2598630E1CE95B83000A3BC3 /* Location.swift in Sources */,
+				25C42BC41D176D4700668518 /* MapsHelper.swift in Sources */,
 				254B94871C96260B0013ADCB /* Trip.swift in Sources */,
 				254B94851C9620DF0013ADCB /* TripsViewController.swift in Sources */,
 				254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */,

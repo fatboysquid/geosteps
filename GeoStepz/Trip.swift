@@ -20,8 +20,8 @@ class Trip {
 
     init() {
         self.id = NSUUID().UUIDString
-        self.title = "Test Trip title " + self.id!
-        self.description = "Test Trip description " + self.id!
+        self.title = ""// + self.id!
+        self.description = ""// + self.id!
         self.locations = [Location]()
     }
 

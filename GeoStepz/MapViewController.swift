@@ -17,7 +17,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var recording = false
     let regionRadius: CLLocationDistance = 1000
 
-    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var startRecordingButton: UIButton!
     @IBOutlet weak var stopRecordingButton: UIButton!
 
@@ -26,10 +26,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         // a trip must consist of at least two locations
         if (currentTrip?.getLocations().count > 1) {
             print("trip consists of \(currentTrip?.getLocations().count) locations; adding...")
+            currentTrip!.title = "New trip \(TripsManager.getTrips().count + 1)"
             TripsManager.addTrip(currentTrip!)
         }
 
-        map.removeOverlays(map.overlays)
+        mapView.removeOverlays(mapView.overlays)
         currentTrip = nil
         recording = false
         stopRecordingButton.enabled = false
@@ -63,14 +64,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         print("viewDidLoad")
         locationManager = CLLocationManager()
         locationManager.delegate = self
-        self.map.delegate = self
+        self.mapView.delegate = self
         locationManager.distanceFilter = 15
         locationManager.requestAlwaysAuthorization()
         view.backgroundColor = UIColor.grayColor()
         stopRecordingButton.enabled = false
-
-            //let dbStubDataJSON = "[{\"id\":\"2982938\",\"title\":\"Las Vegas\",\"description\":\"Spring break 2016!\",\"locations\":[[\"serializedCLLocationData1\",\"serializedCLLocationData2\"]],\"datetime\":\"April 20, 2016\",\"comments\":[{\"id\":\"12345\",\"datetime\":\"April 20, 2016\",\"avatar\":\"http://geosnapscdn.com/somepath\",\"body\":\"Nice trip!\"}],\"photos\":[\"http://geosnapscdn.com/somepath\",\"http://geosnapscdn.com/somepath\"]},{\"id\":\"2922938\",\"title\":\"New York\",\"description\":\"Bachelor party!\",\"locations\":[[\"serializedCLLocationData1\",\"serializedCLLocationData2\"]],\"datetime\":\"April 25, 2016\",\"comments\":[{\"id\":\"67890\",\"datetime\":\"April 25, 2016\",\"avatar\":\"http://geosnapscdn.com/somepath\",\"body\":\"Nice trip!\"}],\"photos\":[\"http://geosnapscdn.com/somepath\",\"http://geosnapscdn.com/somepath\"]}]"
-        //print(TripsManager.tripsManager.convertJSONToDictionary(dbStubDataJSON))
     }
 
     override func didReceiveMemoryWarning() {
@@ -110,19 +108,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         print("didUpdateLocations")
         let location = Location(cllocation: cllocation)
         currentTrip?.addLocation(location)
-        //locationsVisited.append(locations)
-        focusOnUpdatedLocation(cllocation)
-        createPolyline(map)
+        MapsHelper.focusOnUpdatedLocation(mapView, cllocation: cllocation)
+        MapsHelper.createPolyline(mapView, currentTrip: currentTrip!)
     }
-    
-    func focusOnUpdatedLocation(location: [CLLocation]) {
-        let coordinate = location[0].coordinate;
-        let center = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
-    
-        self.map.setRegion(region, animated: true)
-    }
-    
+
     func startScanning() {
         print("startScanning")
         let uuid = NSUUID(UUIDString: "5A4BCFCE-174E-4BAC-A814-092E77F6B7E5")!
@@ -131,7 +120,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.startMonitoringForRegion(beaconRegion)
         locationManager.startRangingBeaconsInRegion(beaconRegion)
     }
-    
+
     func updateDistance(distance: CLProximity) {
         print("updateDistance")
         print(distance)
@@ -155,27 +144,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
         }
     }
-    
-    func createPolyline(mapView: MKMapView) {
-        print("createPolyline")
-        var locationCoordinates = [CLLocationCoordinate2D]()
-        let locations = currentTrip?.getLocations()
 
-        for i in locations! {
-            let locationCoordinate = i.getCLLocation()[0].coordinate
-            locationCoordinates.append(locationCoordinate)
-            print(locationCoordinate.dynamicType)
-        }
-
-        weak var polylinePathOverlay: MKGeodesicPolyline? = MKGeodesicPolyline(coordinates: &locationCoordinates, count: locationCoordinates.count)
-        map.removeOverlays(map.overlays)
-
-        if (polylinePathOverlay != nil) {
-            print("should have removed")
-            map.addOverlay(polylinePathOverlay!)
-        }
-    }
-    
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         guard let polyline = overlay as? MKPolyline else {
             return MKOverlayRenderer()
