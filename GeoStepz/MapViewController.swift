@@ -33,6 +33,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         mapView.removeOverlays(mapView.overlays)
         currentTrip = nil
         recording = false
+        locationManager.stopUpdatingLocation()
         stopRecordingButton.enabled = false
         startRecordingButton.setTitle("Start Trip", forState: .Normal)
     }

@@ -29,11 +29,14 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
 
         if currentTrip != nil {
             print("here is the current trip")
+            /*
             let locations = currentTrip!.getLocations()
             let firstCLLocation = locations[0].getCLLocation()
             print("consists of \(locations.count) locations")
+            */
             MapsHelper.createPolyline(mapView, currentTrip: currentTrip!)
-            MapsHelper.focusOnUpdatedLocation(mapView, cllocation: firstCLLocation)
+            MapsHelper.adjustZoomToFitAllLocations(mapView)
+            //MapsHelper.focusOnUpdatedLocation(mapView, cllocation: firstCLLocation)
         }
     }
 

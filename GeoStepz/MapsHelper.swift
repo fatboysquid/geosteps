@@ -31,4 +31,11 @@ class MapsHelper {
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05))
         mapView.setRegion(region, animated: true)
     }
+
+    static func adjustZoomToFitAllLocations(mapView: MKMapView) {
+        if let first = mapView.overlays.first {
+            let rect = mapView.overlays.reduce(first.boundingMapRect, combine: {MKMapRectUnion($0, $1.boundingMapRect)})
+            mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 140.0, left: 140.0, bottom: 140.0, right: 140.0), animated: true)
+        }
+    }
 }

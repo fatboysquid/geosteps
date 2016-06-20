@@ -293,11 +293,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Nvl-Lp-5Hx" userLabel="Map">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Nvl-Lp-5Hx" userLabel="Map">
                                 <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nvl-Lp-5Hx" firstAttribute="top" secondItem="c3I-d4-Een" secondAttribute="bottom" id="0Gx-aS-pNV"/>
+                            <constraint firstAttribute="trailing" secondItem="Nvl-Lp-5Hx" secondAttribute="trailing" id="36I-hq-Uxz"/>
+                            <constraint firstItem="Nvl-Lp-5Hx" firstAttribute="bottom" secondItem="i9q-qx-eC2" secondAttribute="top" id="91V-ui-ixL"/>
+                            <constraint firstItem="Nvl-Lp-5Hx" firstAttribute="leading" secondItem="2hy-Hs-fxl" secondAttribute="leading" id="XS8-eF-PBL"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="Nvl-Lp-5Hx" id="V7H-Gm-E3l"/>

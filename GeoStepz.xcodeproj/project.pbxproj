@@ -14,6 +14,9 @@
 		254B94871C96260B0013ADCB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94861C96260B0013ADCB /* Trip.swift */; };
 		254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94881C962CCF0013ADCB /* TripsManager.swift */; };
 		257573291CB4878300B05DDD /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257573281CB4878300B05DDD /* TripDetailViewController.swift */; };
+		2580EB991D17C800005F9A87 /* Burbank - Wild Carvery.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB981D17C800005F9A87 /* Burbank - Wild Carvery.gpx */; };
+		2580EB9B1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB9A1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx */; };
+		2580EB9D1D17C95B005F9A87 /* Long Beach - Kihon.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB9C1D17C95B005F9A87 /* Long Beach - Kihon.gpx */; };
 		2598630E1CE95B83000A3BC3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2598630D1CE95B83000A3BC3 /* Location.swift */; };
 		25C42BC41D176D4700668518 /* MapsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C42BC31D176D4700668518 /* MapsHelper.swift */; };
 		25C6C2981CB48E9B009CE38F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C4F1C3C72F100E5AE78 /* Main.storyboard */; };
@@ -41,6 +44,9 @@
 		254B94861C96260B0013ADCB /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		254B94881C962CCF0013ADCB /* TripsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsManager.swift; sourceTree = "<group>"; };
 		257573281CB4878300B05DDD /* TripDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
+		2580EB981D17C800005F9A87 /* Burbank - Wild Carvery.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Burbank - Wild Carvery.gpx"; sourceTree = "<group>"; };
+		2580EB9A1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Glendale - Casa de Ramos.gpx"; sourceTree = "<group>"; };
+		2580EB9C1D17C95B005F9A87 /* Long Beach - Kihon.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Long Beach - Kihon.gpx"; sourceTree = "<group>"; };
 		259436E01C645ED300490414 /* YourProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		259436E11C6464E700490414 /* LosAngeles.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LosAngeles.gpx; sourceTree = "<group>"; };
 		2598630D1CE95B83000A3BC3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -121,8 +127,11 @@
 				259436E01C645ED300490414 /* YourProject-Bridging-Header.h */,
 				2548262E1C6D9A3F0034F49D /* LocationChangeEmulation.gpx */,
 				2548262D1C6D98A70034F49D /* Burbank - Granville Cafe.gpx */,
+				2580EB981D17C800005F9A87 /* Burbank - Wild Carvery.gpx */,
 				2513E8421D13C2380082DE52 /* Eagle Rock - Spitz.gpx */,
+				2580EB9A1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx */,
 				2548262C1C6D987D0034F49D /* Glendale - Grand Central.gpx */,
+				2580EB9C1D17C95B005F9A87 /* Long Beach - Kihon.gpx */,
 				2513E8461D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx */,
 				2513E8441D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx */,
 				2598630D1CE95B83000A3BC3 /* Location.swift */,
@@ -198,13 +207,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2580EB9D1D17C95B005F9A87 /* Long Beach - Kihon.gpx in Resources */,
 				2513E8451D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx in Resources */,
 				2513E8431D13C2380082DE52 /* Eagle Rock - Spitz.gpx in Resources */,
 				984F0C691C3F0DB400E5AE78 /* PublicArt.json in Resources */,
 				984F0C561C3C72F100E5AE78 /* LaunchScreen.storyboard in Resources */,
 				984F0C531C3C72F100E5AE78 /* Assets.xcassets in Resources */,
+				2580EB991D17C800005F9A87 /* Burbank - Wild Carvery.gpx in Resources */,
 				2513E8471D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx in Resources */,
 				25C6C2981CB48E9B009CE38F /* Main.storyboard in Resources */,
+				2580EB9B1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
