@@ -38,4 +38,12 @@ class MapsHelper {
             mapView.setVisibleMapRect(rect, edgePadding: UIEdgeInsets(top: 140.0, left: 140.0, bottom: 140.0, right: 140.0), animated: true)
         }
     }
+/*
+    static func addAnnotation(mapView: MKMapView) {
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2D(latitude: mapView.userLocation.coordinate.latitude, longitude: mapView.userLocation.coordinate.longitude)
+        annotation.title = "Here you are"
+        mapView.addAnnotation(annotation)
+    }
+*/
 }

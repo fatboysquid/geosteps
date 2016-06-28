@@ -27,20 +27,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if (currentTrip?.getLocations().count > 1) {
             print("trip consists of \(currentTrip?.getLocations().count) locations; adding...")
 
-            //1. Create the alert controller.
-            let alert = UIAlertController(title: "Trip Saved", message: "Name your trip.", preferredStyle: .Alert)
-            
-            //2. Add the text field. You can configure it however you need.
-            alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-                textField.text = ""
-            })
-            
-            //3. Grab the value from the text field, and print it when the user clicks OK.
+            let alert = UtilitiesHelper.getAlertInstance("Trip Ended", message: "Name your trip.", hasTextField: true, textFieldValue: "")
+
             alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 let textField = alert.textFields![0] as UITextField
                 print("OK clicked.")
 
-                self.currentTrip!.title = textField.text
+                self.currentTrip!.setTitle(textField.text!)
+                self.currentTrip!.setDateEnd(NSDate())
                 TripsManager.addTrip(self.currentTrip!)
                 self.mapReset();
             }))
@@ -48,13 +42,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             alert.addAction(UIAlertAction(title: "Later", style: .Default, handler: { (action) -> Void in
                 print("Later clicked.")
 
-                self.currentTrip!.title = "New trip \(TripsManager.getTrips().count + 1)"
+                self.currentTrip!.setTitle("\(self.currentTrip!.getTitle()) \(TripsManager.getTrips().count + 1)")
                 TripsManager.addTrip(self.currentTrip!)
 
                 self.mapReset();
             }))
-            
-            // 4. Present the alert.
+
             self.presentViewController(alert, animated: true, completion: nil)
         }
     }

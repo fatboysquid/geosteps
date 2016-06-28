@@ -9,9 +9,6 @@
 import UIKit
 
 class TripsViewController : UITableViewController {
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -38,7 +35,7 @@ class TripsViewController : UITableViewController {
         self.tabBarController?.tabBar.hidden = true
         self.performSegueWithIdentifier("tripDetailSegue", sender: indexPath.row)
     }
-    
+
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier! == "tripDetailSegue" {
             if let destinationVC = segue.destinationViewController as? TripDetailViewController {

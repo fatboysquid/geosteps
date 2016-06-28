@@ -10,6 +10,7 @@
 		2513E8431D13C2380082DE52 /* Eagle Rock - Spitz.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2513E8421D13C2380082DE52 /* Eagle Rock - Spitz.gpx */; };
 		2513E8451D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2513E8441D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx */; };
 		2513E8471D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2513E8461D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx */; };
+		25270A0F1D20949A00846D79 /* UtilitiesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25270A0E1D20949A00846D79 /* UtilitiesHelper.swift */; };
 		254B94851C9620DF0013ADCB /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94841C9620DF0013ADCB /* TripsViewController.swift */; };
 		254B94871C96260B0013ADCB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94861C96260B0013ADCB /* Trip.swift */; };
 		254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94881C962CCF0013ADCB /* TripsManager.swift */; };
@@ -37,6 +38,7 @@
 		2513E8421D13C2380082DE52 /* Eagle Rock - Spitz.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Eagle Rock - Spitz.gpx"; sourceTree = "<group>"; };
 		2513E8441D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Studio City - Midori Sushi.gpx"; sourceTree = "<group>"; };
 		2513E8461D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Northridge - Gen Korean BBQ.gpx"; sourceTree = "<group>"; };
+		25270A0E1D20949A00846D79 /* UtilitiesHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitiesHelper.swift; sourceTree = "<group>"; };
 		2548262C1C6D987D0034F49D /* Glendale - Grand Central.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Glendale - Grand Central.gpx"; sourceTree = "<group>"; };
 		2548262D1C6D98A70034F49D /* Burbank - Granville Cafe.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Burbank - Granville Cafe.gpx"; sourceTree = "<group>"; };
 		2548262E1C6D9A3F0034F49D /* LocationChangeEmulation.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LocationChangeEmulation.gpx; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				25C42BC31D176D4700668518 /* MapsHelper.swift */,
+				25270A0E1D20949A00846D79 /* UtilitiesHelper.swift */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				257573291CB4878300B05DDD /* TripDetailViewController.swift in Sources */,
+				25270A0F1D20949A00846D79 /* UtilitiesHelper.swift in Sources */,
 				2598630E1CE95B83000A3BC3 /* Location.swift in Sources */,
 				25C42BC41D176D4700668518 /* MapsHelper.swift in Sources */,
 				254B94871C96260B0013ADCB /* Trip.swift in Sources */,
