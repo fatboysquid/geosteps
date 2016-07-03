@@ -8,24 +8,39 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
 class Location {
-    var id: String?
-    var title: String?
-    var description: String?
-    let cllocation: [CLLocation]?
-    var datetime: String?
-    var comments: [String]?
-    var photos: [String]?
+    private var id: String?
+    private var cllocation: [CLLocation]?
+    private var annotation: MKPointAnnotation?
+    private var datetime: String?
+    private var comments: [String]?
+    private var photos: [String]?
 
     init(cllocation: [CLLocation]) {
         self.id = NSUUID().UUIDString
-        self.title = "Test Location title " + self.id!
-        self.description = "Test Location description " + self.id!
         self.cllocation = cllocation
+        self.annotation = MKPointAnnotation()
+        self.annotation!.coordinate = cllocation[0].coordinate
+        self.annotation!.title = "[auto named]"
     }
 
-    func getCLLocation() -> [CLLocation]{
+    func getCLLocation() -> [CLLocation] {
         return cllocation!
     }
+
+    func getAnnotation() -> MKPointAnnotation {
+        return annotation!
+    }
+
+    func getAnnotationTitle() -> String {
+        return annotation!.title!
+    }
+
+    /*
+    func setAnnotationTitle(title: String) {
+        annotation!.title = title
+    }
+*/
 }

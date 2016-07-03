@@ -52,7 +52,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
 
-    //WIP: move to helper:
     func mapReset() {
         mapView.removeOverlays(mapView.overlays)
         currentTrip = nil
@@ -135,7 +134,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let location = Location(cllocation: cllocation)
         currentTrip?.addLocation(location)
         MapsHelper.focusOnUpdatedLocation(mapView, cllocation: cllocation)
-        MapsHelper.createPolyline(mapView, currentTrip: currentTrip!)
+        MapsHelper.generatePolyline(mapView, currentTrip: currentTrip!)
     }
 
     func startScanning() {
@@ -172,16 +171,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
 
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
-        guard let polyline = overlay as? MKPolyline else {
-            return MKOverlayRenderer()
-        }
-
-        let renderer = MKPolylineRenderer(polyline: polyline)
-        renderer.lineWidth = 2.0
-        renderer.alpha = 0.5
-        renderer.strokeColor = UIColor.blueColor()
-
-        return renderer
+        return MapsHelper.mkOverlayRenderer(mapView, rendererForOverlay: overlay)
     }
-
 }

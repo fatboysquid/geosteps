@@ -93,7 +93,7 @@ class TripsManager {
         trips.append(trip)
     }
 
-    static func deleteTrip(trip: Trip) {
+    static func removeTrip(trip: Trip) {
         trips = trips.filter() { $0 !== trip }
     }
 }

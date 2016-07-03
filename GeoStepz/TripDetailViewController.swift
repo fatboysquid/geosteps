@@ -68,7 +68,7 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
 
         alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) -> Void in
             print("Yes clicked.")
-            TripsManager.deleteTrip(self.currentTrip!)
+            TripsManager.removeTrip(self.currentTrip!)
 
             if let navController = self.navigationController {
                 navController.popViewControllerAnimated(true)
@@ -97,30 +97,45 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
         view.backgroundColor = UIColor.grayColor()
 
         initTripDetails()
-
-        if currentTrip != nil {
-            print("here is the current trip")
-            MapsHelper.createPolyline(mapView, currentTrip: currentTrip!)
-            MapsHelper.adjustZoomToFitAllLocations(mapView)
-        }
     }
 
     func initTripDetails() {
         tripNameButton.setTitle(currentTrip!.getTitle(), forState: UIControlState.Normal)
         tripDateButton.setTitle("May 31, 2016 - June 7, 2016", forState: UIControlState.Normal)
         tripDescriptionButton.setTitle(currentTrip!.getDescription(), forState: UIControlState.Normal)
+
+        if currentTrip != nil {
+            print("here is the current trip")
+            MapsHelper.generatePolyline(mapView, currentTrip: currentTrip!)
+            MapsHelper.adjustZoomToFitAllLocations(mapView)
+        }
     }
 
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
-        guard let polyline = overlay as? MKPolyline else {
-            return MKOverlayRenderer()
-        }
+        return MapsHelper.mkOverlayRenderer(mapView, rendererForOverlay: overlay)
+    }
 
-        let renderer = MKPolylineRenderer(polyline: polyline)
-        renderer.lineWidth = 2.0
-        renderer.alpha = 0.5
-        renderer.strokeColor = UIColor.blueColor()
+    /*
+    func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
+        return nil
+    }
+    */
 
-        return renderer
+    func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
+        print("annotation tapped")
+        let annotation = view.annotation
+
+        let alert = UtilitiesHelper.getAlertInstance("Delete location?", message: "", hasTextField: false, textFieldValue: "")
+        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) -> Void in
+            print("Yes clicked.")
+            self.currentTrip!.removeLocation((annotation?.coordinate)!)
+            MapsHelper.generatePolyline(mapView, currentTrip: self.currentTrip!)
+        }))
+
+        alert.addAction(UIAlertAction(title: "No", style: .Default, handler: { (action) -> Void in
+            print("No clicked.")
+        }))
+
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 }

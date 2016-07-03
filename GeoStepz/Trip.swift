@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
 class Trip {
     private var id: String
@@ -56,6 +57,20 @@ class Trip {
 
     func addLocation(location: Location) {
         locations.append(location)
+    }
+
+    func removeLocation(coordinate: CLLocationCoordinate2D) {
+        let latitude = coordinate.latitude
+        let longitude = coordinate.longitude
+
+        for i in locations {
+            let currentLocation = i.getCLLocation()[0]
+            if currentLocation.coordinate.latitude == latitude &&
+                currentLocation.coordinate.longitude == longitude {
+                locations = locations.filter() { $0.getCLLocation()[0] !== currentLocation }
+                break
+            }
+        }
     }
 
     func getDateStart() -> NSDate {
