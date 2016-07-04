@@ -1,6 +1,7 @@
 import UIKit
 import CoreLocation
 import MapKit
+import GoogleMaps
 
 class MapsHelper {
     static func generatePolyline(mapView: MKMapView, currentTrip: Trip) {
@@ -15,7 +16,6 @@ class MapsHelper {
 
             let annotation = i.getAnnotation()
             self.addAnnotation(mapView, annotation: annotation)
-            //self.showAnnotation(mapView, annotation: annotation)
         }
 
         weak var polylinePathOverlay: MKGeodesicPolyline? = MKGeodesicPolyline(coordinates: &locationCoordinates, count: locationCoordinates.count)
@@ -68,21 +68,8 @@ class MapsHelper {
         mapView.removeAnnotations(mapView.annotations)
     }
 
-    /*
-    static func showAnnotation(mapView: MKMapView, annotation: MKAnnotation) {
-    mapView.selectAnnotation(annotation, animated: true)
+    static func initGoogleMapsAPI(locationManager: CLLocationManager) {
+        GMSServices.provideAPIKey("AIzaSyB2jwAHbC00SiuZfZR3U5N5tlDv0uOkU8k")
+        locationManager.requestAlwaysAuthorization()
     }
-
-    static func createAnnotation(mapView: MKMapView, coordinate: CLLocationCoordinate2D) -> MKPointAnnotation {
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2D(latitude: coordinate.latitude, longitude: coordinate.longitude)
-        mapView.addAnnotation(annotation)
-
-        return annotation
-    }
-
-    static func setAnnotationTitle(annotation: MKPointAnnotation, title: String) {
-        annotation.title = title
-    }
-*/
 }

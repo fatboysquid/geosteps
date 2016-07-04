@@ -9,6 +9,7 @@
 import Foundation
 import CoreLocation
 import MapKit
+import GoogleMaps
 
 class Location {
     private var id: String?
@@ -23,7 +24,6 @@ class Location {
         self.cllocation = cllocation
         self.annotation = MKPointAnnotation()
         self.annotation!.coordinate = cllocation[0].coordinate
-        self.annotation!.title = "[auto named]"
     }
 
     func getCLLocation() -> [CLLocation] {
@@ -38,9 +38,38 @@ class Location {
         return annotation!.title!
     }
 
-    /*
-    func setAnnotationTitle(title: String) {
-        annotation!.title = title
+    func setAnnotationTitle() {
+        let placesClient: GMSPlacesClient = GMSPlacesClient()
+
+        placesClient.currentPlaceWithCallback({ (placeLikelihoods, error) -> Void in
+            if error != nil {
+                print("Current Place error: \(error!.localizedDescription)")
+
+                CLGeocoder().reverseGeocodeLocation(self.getCLLocation()[0], completionHandler: {(placemarks, error) -> Void in
+                    
+                    if error != nil {
+                        print("Reverse geocoder failed with error" + error!.localizedDescription)
+                        return
+                    }
+                    
+                    if placemarks!.count > 0 {
+                        let pm = placemarks![0] as CLPlacemark
+                        self.annotation!.title = pm.locality
+                    }
+                    else {
+                        print("Problem with the data received from geocoder")
+                    }
+                })
+            } else {
+                for likelihood in placeLikelihoods!.likelihoods {
+                    if let likelihood = likelihood as? GMSPlaceLikelihood {
+                        let place = likelihood.place
+                        self.annotation!.title = place.name
+
+                        break
+                    }
+                }
+            }
+        })
     }
-*/
 }

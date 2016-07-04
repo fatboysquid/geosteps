@@ -92,6 +92,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.mapView.delegate = self
         locationManager.distanceFilter = 15
         locationManager.requestAlwaysAuthorization()
+        MapsHelper.initGoogleMapsAPI(locationManager)
         view.backgroundColor = UIColor.grayColor()
         stopRecordingButton.enabled = false
     }
@@ -132,6 +133,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func locationManager(manager: CLLocationManager, didUpdateLocations cllocation: [CLLocation]) {
         print("didUpdateLocations")
         let location = Location(cllocation: cllocation)
+        location.setAnnotationTitle()
         currentTrip?.addLocation(location)
         MapsHelper.focusOnUpdatedLocation(mapView, cllocation: cllocation)
         MapsHelper.generatePolyline(mapView, currentTrip: currentTrip!)
