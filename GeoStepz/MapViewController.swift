@@ -93,7 +93,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.distanceFilter = 15
         locationManager.requestAlwaysAuthorization()
         MapsHelper.initGoogleMapsAPI(locationManager)
-        view.backgroundColor = UIColor.grayColor()
         stopRecordingButton.enabled = false
     }
 
@@ -112,7 +111,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
         }
     }
-    
+
+    /*
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         if beacons.count > 0 {
             print("didRangeBeacons 1")
@@ -123,7 +123,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             updateDistance(.Unknown)
         }
     }
-    
+    */
+
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         //locationManager.stopUpdatingLocation()
         print("didFailWithError")
@@ -148,6 +149,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.startRangingBeaconsInRegion(beaconRegion)
     }
 
+    /*
     func updateDistance(distance: CLProximity) {
         print("updateDistance")
         print(distance)
@@ -171,6 +173,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
         }
     }
+    */
 
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
         return MapsHelper.mkOverlayRenderer(mapView, rendererForOverlay: overlay)

@@ -64,22 +64,7 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
         self.presentViewController(alert, animated: true, completion: nil)
     }
     @IBAction func tripDeleteButton(sender: AnyObject) {
-        let alert = UtilitiesHelper.getAlertInstance("Delete", message: "Are you sure?", hasTextField: false, textFieldValue: "")
-
-        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) -> Void in
-            print("Yes clicked.")
-            TripsManager.removeTrip(self.currentTrip!)
-
-            if let navController = self.navigationController {
-                navController.popViewControllerAnimated(true)
-            }
-        }))
-
-        alert.addAction(UIAlertAction(title: "No", style: .Default, handler: { (action) -> Void in
-            print("No clicked.")
-        }))
-
-        self.presentViewController(alert, animated: true, completion: nil)
+        deleteTrip()
     }
     @IBAction func tripPhotosButton(sender: AnyObject) {
     }
@@ -94,7 +79,6 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
         self.mapView.delegate = self
         locationManager.distanceFilter = 15
         locationManager.requestAlwaysAuthorization()
-        view.backgroundColor = UIColor.grayColor()
 
         initTripDetails()
     }
@@ -128,14 +112,42 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
         let alert = UtilitiesHelper.getAlertInstance("Delete location?", message: "", hasTextField: false, textFieldValue: "")
         alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) -> Void in
             print("Yes clicked.")
-            self.currentTrip!.removeLocation((annotation?.coordinate)!)
-            MapsHelper.generatePolyline(mapView, currentTrip: self.currentTrip!)
+
+            // make sure there are still at least a couple of locations left; otherwise, delete the whole trip
+            if self.currentTrip!.getLocations().count > 2 {
+                self.currentTrip!.removeLocation((annotation?.coordinate)!)
+                MapsHelper.generatePolyline(mapView, currentTrip: self.currentTrip!)
+                print("Location deleted successfully.")
+            } else {
+                self.deleteTrip()
+                print("Trip deleted successfully.")
+            }
         }))
 
         alert.addAction(UIAlertAction(title: "No", style: .Default, handler: { (action) -> Void in
             print("No clicked.")
         }))
 
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+
+    //TODO: probably move this into the Trip.swift or TripsManager.swift file
+    func deleteTrip() {
+        let alert = UtilitiesHelper.getAlertInstance("Delete", message: "Trip will be deleted. Are you sure?", hasTextField: false, textFieldValue: "")
+        
+        alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) -> Void in
+            print("Yes clicked.")
+            TripsManager.removeTrip(self.currentTrip!)
+            
+            if let navController = self.navigationController {
+                navController.popViewControllerAnimated(true)
+            }
+        }))
+        
+        alert.addAction(UIAlertAction(title: "No", style: .Default, handler: { (action) -> Void in
+            print("No clicked.")
+        }))
+        
         self.presentViewController(alert, animated: true, completion: nil)
     }
 }

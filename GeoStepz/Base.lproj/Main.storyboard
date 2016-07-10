@@ -108,25 +108,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Map" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkp-a3-MqV">
-                                <rect key="frame" x="28" y="28" width="131" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="43" id="fxp-Dl-9fH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="fxp-Dl-9fH"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="fxp-Dl-9fH"/>
-                                    </mask>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KB-no-pnC">
                                 <rect key="frame" x="113" y="23" width="88" height="30"/>
                                 <state key="normal" title="Start Trip"/>
@@ -156,6 +137,7 @@
                             </button>
                             <mapView multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="map" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpY-BN-oJT">
                                 <rect key="frame" x="0.0" y="71" width="600" height="529"/>
+                                <color key="backgroundColor" red="0.01982010428" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="529" id="IIs-Mr-cVJ"/>
                                 </constraints>
@@ -166,18 +148,14 @@
                                 </variation>
                             </mapView>
                         </subviews>
+                        <color key="backgroundColor" red="0.01982010428" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mkp-a3-MqV" firstAttribute="top" secondItem="v2b-Cg-OzC" secondAttribute="bottom" constant="8" symbolic="YES" id="2cG-2y-NyU"/>
-                            <constraint firstItem="gpY-BN-oJT" firstAttribute="top" secondItem="mkp-a3-MqV" secondAttribute="bottom" constant="22" id="2oQ-xE-ZZC"/>
                             <constraint firstItem="gpY-BN-oJT" firstAttribute="top" secondItem="5KB-no-pnC" secondAttribute="bottom" constant="16" id="3AU-QO-Dta"/>
-                            <constraint firstItem="mkp-a3-MqV" firstAttribute="leading" secondItem="Ote-K7-Fj6" secondAttribute="leadingMargin" constant="8" id="4fa-p4-joD"/>
-                            <constraint firstItem="mkp-a3-MqV" firstAttribute="centerY" secondItem="5KB-no-pnC" secondAttribute="centerY" id="7f0-36-dWk"/>
                             <constraint firstItem="5KB-no-pnC" firstAttribute="top" secondItem="v2b-Cg-OzC" secondAttribute="bottom" constant="3" id="9cy-Rf-UoR"/>
                             <constraint firstAttribute="bottom" secondItem="gpY-BN-oJT" secondAttribute="bottom" id="Gfd-JI-gO3"/>
                             <constraint firstItem="gpY-BN-oJT" firstAttribute="leading" secondItem="Ote-K7-Fj6" secondAttribute="leading" id="JdD-yM-nAM"/>
                             <constraint firstItem="gpY-BN-oJT" firstAttribute="bottom" secondItem="DrJ-x0-54d" secondAttribute="top" id="Yl0-VB-hKO"/>
                             <constraint firstItem="TPP-eG-tRd" firstAttribute="baseline" secondItem="5KB-no-pnC" secondAttribute="baseline" id="en2-QM-uew"/>
-                            <constraint firstItem="5KB-no-pnC" firstAttribute="leading" secondItem="mkp-a3-MqV" secondAttribute="trailing" constant="42" id="grk-w0-j35"/>
                             <constraint firstItem="gpY-BN-oJT" firstAttribute="leading" secondItem="Ote-K7-Fj6" secondAttribute="leading" id="hgt-u9-5yw"/>
                             <constraint firstAttribute="trailing" secondItem="gpY-BN-oJT" secondAttribute="trailing" id="i5z-2s-vfh"/>
                             <constraint firstAttribute="trailing" secondItem="gpY-BN-oJT" secondAttribute="trailing" id="rYr-JA-7xc"/>
@@ -186,15 +164,11 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="2cG-2y-NyU"/>
-                                <exclude reference="4fa-p4-joD"/>
-                                <exclude reference="7f0-36-dWk"/>
                                 <exclude reference="3AU-QO-Dta"/>
                                 <exclude reference="JdD-yM-nAM"/>
                                 <exclude reference="Yl0-VB-hKO"/>
                                 <exclude reference="i5z-2s-vfh"/>
                                 <exclude reference="9cy-Rf-UoR"/>
-                                <exclude reference="grk-w0-j35"/>
                                 <exclude reference="en2-QM-uew"/>
                                 <exclude reference="udP-sM-zsS"/>
                                 <exclude reference="ykP-hg-7Fh"/>
@@ -202,10 +176,6 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="2cG-2y-NyU"/>
-                                <include reference="4fa-p4-joD"/>
-                                <include reference="7f0-36-dWk"/>
-                                <exclude reference="2oQ-xE-ZZC"/>
                                 <include reference="3AU-QO-Dta"/>
                                 <exclude reference="Gfd-JI-gO3"/>
                                 <include reference="JdD-yM-nAM"/>
@@ -214,7 +184,6 @@
                                 <include reference="i5z-2s-vfh"/>
                                 <exclude reference="rYr-JA-7xc"/>
                                 <include reference="9cy-Rf-UoR"/>
-                                <include reference="grk-w0-j35"/>
                                 <include reference="en2-QM-uew"/>
                                 <include reference="udP-sM-zsS"/>
                                 <include reference="ykP-hg-7Fh"/>
@@ -369,14 +338,6 @@
                     <view key="view" contentMode="scaleToFill" id="Bjr-wA-oFD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="joz-bZ-5bZ">
-                                <rect key="frame" x="20" y="28" width="131" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.01982010428" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="spQ-Ds-3Hb"/>
@@ -396,14 +357,6 @@
                     <view key="view" contentMode="scaleToFill" id="hIw-Qm-ldK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Friends" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czq-GR-e0x">
-                                <rect key="frame" x="20" y="28" width="57" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="0.01982010428" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Friends" id="6cg-bv-enJ"/>
