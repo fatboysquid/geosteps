@@ -9,6 +9,12 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    @IBAction func signOutButton(sender: UIButton) {
+        //do sign out logic, then redirect to login page
+
+        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SignInViewController")
+        self.presentViewController(secondViewController!, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

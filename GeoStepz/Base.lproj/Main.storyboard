@@ -10,7 +10,7 @@
         <!--Sign In-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="GeoStepz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="SignInViewController" customModule="GeoStepz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -338,13 +338,35 @@
                     <view key="view" contentMode="scaleToFill" id="Bjr-wA-oFD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ppt-d5-jRk">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="28" width="61" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="signOutButton:" destination="Dwu-P6-IqW" eventType="touchUpInside" id="tDb-QA-f89"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.01982010428" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ppt-d5-jRk"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ppt-d5-jRk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="spQ-Ds-3Hb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZX-YM-AcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1476" y="2329"/>
+            <point key="canvasLocation" x="1476" y="2328.75"/>
         </scene>
         <!--Friends-->
         <scene sceneID="nI2-sK-Gwy">
@@ -732,8 +754,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vSC-Dp-jKI"/>
-        <segue reference="Nnd-ZI-IQv"/>
+        <segue reference="6zM-il-vUA"/>
         <segue reference="n7R-TN-NGc"/>
+        <segue reference="Nnd-ZI-IQv"/>
     </inferredMetricsTieBreakers>
 </document>
