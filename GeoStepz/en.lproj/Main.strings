@@ -1,0 +1,87 @@
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "1AP-1z-mxU"; */
+"1AP-1z-mxU.text" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "1OM-fL-EPF"; */
+"1OM-fL-EPF.normalTitle" = "Register";
+
+/* Class = "UILabel"; text = "Public:"; ObjectID = "2ow-Rs-Upr"; */
+"2ow-Rs-Upr.text" = "Public:";
+
+/* Class = "UIButton"; normalTitle = "Start Trip"; ObjectID = "5KB-no-pnC"; */
+"5KB-no-pnC.normalTitle" = "Start Trip";
+
+/* Class = "UILabel"; text = "Re-enter Password"; ObjectID = "6OJ-Wf-Ae4"; */
+"6OJ-Wf-Ae4.text" = "Re-enter Password";
+
+/* Class = "UITabBarItem"; title = "Friends"; ObjectID = "6cg-bv-enJ"; */
+"6cg-bv-enJ.title" = "Friends";
+
+/* Class = "UITabBarItem"; title = "Register"; ObjectID = "7dP-78-mBp"; */
+"7dP-78-mBp.title" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "9Le-1m-E2N"; */
+"9Le-1m-E2N.normalTitle" = "Login";
+
+/* Class = "UILabel"; text = "Username"; ObjectID = "AW9-tm-NVE"; */
+"AW9-tm-NVE.text" = "Username";
+
+/* Class = "UIButton"; normalTitle = "Date"; ObjectID = "CO7-0p-ygF"; */
+"CO7-0p-ygF.normalTitle" = "Date";
+
+/* Class = "UIButton"; normalTitle = "Already a member?"; ObjectID = "Dud-P8-x7R"; */
+"Dud-P8-x7R.normalTitle" = "Already a member?";
+
+/* Class = "UILabel"; text = "Register"; ObjectID = "Dy7-y3-baI"; */
+"Dy7-y3-baI.text" = "Register";
+
+/* Class = "UILabel"; text = "Email/Username"; ObjectID = "H95-cK-i1l"; */
+"H95-cK-i1l.text" = "Email/Username";
+
+/* Class = "UIButton"; normalTitle = "Not a member yet?"; ObjectID = "HMQ-Ap-73N"; */
+"HMQ-Ap-73N.normalTitle" = "Not a member yet?";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "KTF-PK-Q3p"; */
+"KTF-PK-Q3p.normalTitle" = "Share";
+
+/* Class = "UIButton"; normalTitle = "Description"; ObjectID = "Ogy-IH-ack"; */
+"Ogy-IH-ack.normalTitle" = "Description";
+
+/* Class = "UIButton"; normalTitle = "End Trip"; ObjectID = "TPP-eG-tRd"; */
+"TPP-eG-tRd.normalTitle" = "End Trip";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "Taw-tG-6s7"; */
+"Taw-tG-6s7.text" = "Email";
+
+/* Class = "UITabBarItem"; title = "Sign In"; ObjectID = "UUn-zT-MtD"; */
+"UUn-zT-MtD.title" = "Sign In";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "WIg-46-szC"; */
+"WIg-46-szC.text" = "Title";
+
+/* Class = "UILabel"; text = "Sign In"; ObjectID = "ZAn-Nb-623"; */
+"ZAn-Nb-623.text" = "Sign In";
+
+/* Class = "UITabBarItem"; title = "Trips"; ObjectID = "aeR-Xz-US8"; */
+"aeR-Xz-US8.title" = "Trips";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "ppt-d5-jRk"; */
+"ppt-d5-jRk.normalTitle" = "Sign Out";
+
+/* Class = "UIButton"; normalTitle = "Delete"; ObjectID = "qcX-Qv-8gT"; */
+"qcX-Qv-8gT.normalTitle" = "Delete";
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "spQ-Ds-3Hb"; */
+"spQ-Ds-3Hb.title" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Photos"; ObjectID = "u0j-sK-oBb"; */
+"u0j-sK-oBb.normalTitle" = "Photos";
+
+/* Class = "UITabBarItem"; title = "Map"; ObjectID = "wsD-uX-9Ut"; */
+"wsD-uX-9Ut.title" = "Map";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "xS8-xz-gTN"; */
+"xS8-xz-gTN.text" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Name"; ObjectID = "zKy-qL-Wsf"; */
+"zKy-qL-Wsf.normalTitle" = "Name";

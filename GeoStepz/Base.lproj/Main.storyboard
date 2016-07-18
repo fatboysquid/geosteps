@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qQq-5O-dpU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qQq-5O-dpU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -99,7 +99,7 @@
         <!--Map-->
         <scene sceneID="zN7-eW-Uv7">
             <objects>
-                <viewController id="82D-rz-VDg" customClass="MapViewController" customModule="GeoStepz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="82D-rz-VDg" customClass="MapViewController" customModule="GeoStepz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v2b-Cg-OzC"/>
                         <viewControllerLayoutGuide type="bottom" id="DrJ-x0-54d"/>
@@ -108,14 +108,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KB-no-pnC">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KB-no-pnC">
                                 <rect key="frame" x="113" y="23" width="88" height="30"/>
                                 <state key="normal" title="Start Trip"/>
                                 <connections>
                                     <action selector="startRecording:" destination="82D-rz-VDg" eventType="touchUpInside" id="wn3-67-unU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPP-eG-tRd">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TPP-eG-tRd">
                                 <rect key="frame" x="247" y="23" width="57" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="57" id="TvW-IW-lyG"/>
@@ -479,7 +479,7 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Nvl-Lp-5Hx" userLabel="Map">
                                 <rect key="frame" x="0.0" y="65" width="600" height="343"/>
                             </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO7-0p-ygF">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CO7-0p-ygF">
                                 <rect key="frame" x="20" y="453" width="385" height="30"/>
                                 <state key="normal" title="Date"/>
                                 <connections>
@@ -569,24 +569,24 @@
                                 <exclude reference="NoA-54-Ubs"/>
                                 <exclude reference="YEu-k9-LJu"/>
                                 <exclude reference="POE-tq-K3X"/>
-                                <exclude reference="VSz-t2-wKT"/>
                                 <exclude reference="AOd-fc-iwU"/>
                                 <exclude reference="JIl-yW-dYv"/>
                                 <exclude reference="dyN-WO-rSL"/>
                                 <exclude reference="eVD-co-4r8"/>
+                                <exclude reference="52v-vy-09F"/>
+                                <exclude reference="KV0-Jv-CjP"/>
+                                <exclude reference="r1f-VB-K4m"/>
+                                <exclude reference="RM6-BN-TYU"/>
+                                <exclude reference="VSz-t2-wKT"/>
+                                <exclude reference="nAa-aJ-AOj"/>
                                 <exclude reference="DEE-mg-nHE"/>
                                 <exclude reference="KZj-YN-u45"/>
                                 <exclude reference="Zc9-pH-iWh"/>
                                 <exclude reference="mUN-8m-C1j"/>
-                                <exclude reference="52v-vy-09F"/>
-                                <exclude reference="KV0-Jv-CjP"/>
-                                <exclude reference="r1f-VB-K4m"/>
-                                <exclude reference="nAa-aJ-AOj"/>
                                 <exclude reference="5fF-dY-yb6"/>
                                 <exclude reference="8gj-2E-tas"/>
                                 <exclude reference="qne-7a-bq3"/>
                                 <exclude reference="rcc-1X-aMv"/>
-                                <exclude reference="RM6-BN-TYU"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -603,16 +603,24 @@
                                 <include reference="YEu-k9-LJu"/>
                                 <exclude reference="nw5-Wz-Yfn"/>
                                 <include reference="POE-tq-K3X"/>
-                                <exclude reference="LD3-cu-Jqj"/>
-                                <include reference="VSz-t2-wKT"/>
-                                <exclude reference="iri-oG-kM6"/>
-                                <exclude reference="wZ9-fh-SgF"/>
                                 <exclude reference="2p9-z0-9Ji"/>
                                 <include reference="AOd-fc-iwU"/>
                                 <include reference="JIl-yW-dYv"/>
                                 <include reference="dyN-WO-rSL"/>
                                 <include reference="eVD-co-4r8"/>
                                 <exclude reference="hed-NJ-kfM"/>
+                                <include reference="52v-vy-09F"/>
+                                <exclude reference="H5L-aT-see"/>
+                                <include reference="KV0-Jv-CjP"/>
+                                <include reference="r1f-VB-K4m"/>
+                                <include reference="RM6-BN-TYU"/>
+                                <exclude reference="WmU-FY-Eaj"/>
+                                <exclude reference="LD3-cu-Jqj"/>
+                                <include reference="VSz-t2-wKT"/>
+                                <exclude reference="iri-oG-kM6"/>
+                                <exclude reference="wZ9-fh-SgF"/>
+                                <include reference="nAa-aJ-AOj"/>
+                                <exclude reference="s5M-aF-3uD"/>
                                 <include reference="DEE-mg-nHE"/>
                                 <include reference="KZj-YN-u45"/>
                                 <exclude reference="QTj-cU-1fr"/>
@@ -620,12 +628,6 @@
                                 <include reference="mUN-8m-C1j"/>
                                 <exclude reference="rbp-nO-NR0"/>
                                 <exclude reference="rwt-B2-7Cu"/>
-                                <include reference="52v-vy-09F"/>
-                                <exclude reference="H5L-aT-see"/>
-                                <include reference="KV0-Jv-CjP"/>
-                                <include reference="r1f-VB-K4m"/>
-                                <include reference="nAa-aJ-AOj"/>
-                                <exclude reference="s5M-aF-3uD"/>
                                 <exclude reference="5K9-oy-yek"/>
                                 <include reference="5fF-dY-yb6"/>
                                 <include reference="8gj-2E-tas"/>
@@ -633,8 +635,6 @@
                                 <include reference="qne-7a-bq3"/>
                                 <include reference="rcc-1X-aMv"/>
                                 <exclude reference="yHw-AV-czJ"/>
-                                <include reference="RM6-BN-TYU"/>
-                                <exclude reference="WmU-FY-Eaj"/>
                             </mask>
                         </variation>
                     </view>

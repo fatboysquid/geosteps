@@ -27,8 +27,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if (currentTrip?.getLocations().count > 1) {
             print("trip consists of \(currentTrip?.getLocations().count) locations; adding...")
 
-            let alert = UtilitiesHelper.getAlertInstance("Trip Ended", message: "Name your trip.", hasTextField: true, textFieldValue: "")
-
+            let alert = UtilitiesHelper.getAlertInstance(self, title: "Trip Ended", message: "Name your trip.", hasTextField: true, textFieldValue: "")
             alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 let textField = alert.textFields![0] as UITextField
                 print("OK clicked.")
@@ -38,7 +37,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 TripsManager.addTrip(self.currentTrip!)
                 self.mapReset();
             }))
-
             alert.addAction(UIAlertAction(title: "Later", style: .Default, handler: { (action) -> Void in
                 print("Later clicked.")
 
@@ -47,8 +45,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
 
                 self.mapReset();
             }))
-
-            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
 

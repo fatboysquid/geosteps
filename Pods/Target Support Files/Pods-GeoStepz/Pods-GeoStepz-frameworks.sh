@@ -82,3 +82,12 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftMongoDB/SwiftMongoDB.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/mongo-c-driver/mongo_c_driver.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "$BUILT_PRODUCTS_DIR/SwiftMongoDB/SwiftMongoDB.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/mongo-c-driver/mongo_c_driver.framework"
+fi

@@ -15,14 +15,16 @@
 		254B94851C9620DF0013ADCB /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94841C9620DF0013ADCB /* TripsViewController.swift */; };
 		254B94871C96260B0013ADCB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94861C96260B0013ADCB /* Trip.swift */; };
 		254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94881C962CCF0013ADCB /* TripsManager.swift */; };
+		256658081D3C6789009C5BD8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256658071D3C6789009C5BD8 /* User.swift */; };
+		2566580A1D3C8DCB009C5BD8 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256658091D3C8DCB009C5BD8 /* LoginHelper.swift */; };
 		257573291CB4878300B05DDD /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257573281CB4878300B05DDD /* TripDetailViewController.swift */; };
 		2580EB991D17C800005F9A87 /* Burbank - Wild Carvery.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB981D17C800005F9A87 /* Burbank - Wild Carvery.gpx */; };
 		2580EB9B1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB9A1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx */; };
 		2580EB9D1D17C95B005F9A87 /* Long Beach - Kihon.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB9C1D17C95B005F9A87 /* Long Beach - Kihon.gpx */; };
 		2598630E1CE95B83000A3BC3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2598630D1CE95B83000A3BC3 /* Location.swift */; };
+		25BBEDC01D38AA5D001009D0 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBEDBF1D38AA5D001009D0 /* DBHelper.swift */; };
 		25C42BC41D176D4700668518 /* MapsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C42BC31D176D4700668518 /* MapsHelper.swift */; };
 		25C6C2981CB48E9B009CE38F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C4F1C3C72F100E5AE78 /* Main.storyboard */; };
-		4A4714C2B2DFD1D4FB0FD4D5 /* libPods-GeoStepz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BAA3A50E099258CA29D2036E /* libPods-GeoStepz.a */; };
 		984F0C4C1C3C72F100E5AE78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C4B1C3C72F100E5AE78 /* AppDelegate.swift */; };
 		984F0C4E1C3C72F100E5AE78 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C4D1C3C72F100E5AE78 /* SignInViewController.swift */; };
 		984F0C531C3C72F100E5AE78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C521C3C72F100E5AE78 /* Assets.xcassets */; };
@@ -34,9 +36,11 @@
 		984F0C661C3DB22400E5AE78 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 984F0C651C3DB22400E5AE78 /* CoreLocation.framework */; };
 		984F0C691C3F0DB400E5AE78 /* PublicArt.json in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C681C3F0DB400E5AE78 /* PublicArt.json */; };
 		984F0C6B1C3F126400E5AE78 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C6A1C3F126400E5AE78 /* Artwork.swift */; };
+		A2F113D97CB0F75BDE260995 /* Pods_GeoStepz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6A417D3CE991212D389629 /* Pods_GeoStepz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B6A417D3CE991212D389629 /* Pods_GeoStepz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoStepz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2513E8421D13C2380082DE52 /* Eagle Rock - Spitz.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Eagle Rock - Spitz.gpx"; sourceTree = "<group>"; };
 		2513E8441D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Studio City - Midori Sushi.gpx"; sourceTree = "<group>"; };
 		2513E8461D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Northridge - Gen Korean BBQ.gpx"; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 		254B94841C9620DF0013ADCB /* TripsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		254B94861C96260B0013ADCB /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		254B94881C962CCF0013ADCB /* TripsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsManager.swift; sourceTree = "<group>"; };
+		256658071D3C6789009C5BD8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		256658091D3C8DCB009C5BD8 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
 		257573281CB4878300B05DDD /* TripDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 		2580EB981D17C800005F9A87 /* Burbank - Wild Carvery.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Burbank - Wild Carvery.gpx"; sourceTree = "<group>"; };
 		2580EB9A1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Glendale - Casa de Ramos.gpx"; sourceTree = "<group>"; };
@@ -55,6 +61,7 @@
 		259436E01C645ED300490414 /* YourProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		259436E11C6464E700490414 /* LosAngeles.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LosAngeles.gpx; sourceTree = "<group>"; };
 		2598630D1CE95B83000A3BC3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		25BBEDBF1D38AA5D001009D0 /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
 		25C42BC31D176D4700668518 /* MapsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsHelper.swift; sourceTree = "<group>"; };
 		95A7ABC62B3288969F537948 /* Pods-GeoStepz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStepz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStepz/Pods-GeoStepz.debug.xcconfig"; sourceTree = "<group>"; };
 		984F0C481C3C72F100E5AE78 /* GeoStepz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStepz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,7 +79,6 @@
 		984F0C681C3F0DB400E5AE78 /* PublicArt.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PublicArt.json; sourceTree = "<group>"; };
 		984F0C6A1C3F126400E5AE78 /* Artwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artwork.swift; sourceTree = "<group>"; };
 		ACEBD911D119C0649ED28CE8 /* Pods-GeoStepz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStepz.release.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStepz/Pods-GeoStepz.release.xcconfig"; sourceTree = "<group>"; };
-		BAA3A50E099258CA29D2036E /* libPods-GeoStepz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GeoStepz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +88,7 @@
 			files = (
 				984F0C661C3DB22400E5AE78 /* CoreLocation.framework in Frameworks */,
 				984F0C641C3DAC8900E5AE78 /* MapKit.framework in Frameworks */,
-				4A4714C2B2DFD1D4FB0FD4D5 /* libPods-GeoStepz.a in Frameworks */,
+				A2F113D97CB0F75BDE260995 /* Pods_GeoStepz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +98,8 @@
 		255405651D1770AC003441DB /* helpers */ = {
 			isa = PBXGroup;
 			children = (
+				25BBEDBF1D38AA5D001009D0 /* DBHelper.swift */,
+				256658091D3C8DCB009C5BD8 /* LoginHelper.swift */,
 				25C42BC31D176D4700668518 /* MapsHelper.swift */,
 				25270A0E1D20949A00846D79 /* UtilitiesHelper.swift */,
 			);
@@ -150,6 +158,7 @@
 				2598630D1CE95B83000A3BC3 /* Location.swift */,
 				254B94861C96260B0013ADCB /* Trip.swift */,
 				254B94881C962CCF0013ADCB /* TripsManager.swift */,
+				256658071D3C6789009C5BD8 /* User.swift */,
 			);
 			path = GeoStepz;
 			sourceTree = "<group>";
@@ -165,7 +174,7 @@
 		C73BB6CE9DCD1F18DCB8B3F6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BAA3A50E099258CA29D2036E /* libPods-GeoStepz.a */,
+				0B6A417D3CE991212D389629 /* Pods_GeoStepz.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -210,7 +219,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = "Sang Lee";
+				ORGANIZATIONNAME = "Areg Abcarians";
 				TargetAttributes = {
 					984F0C471C3C72F100E5AE78 = {
 						CreatedOnToolsVersion = 7.0;
@@ -312,11 +321,14 @@
 				25270A0F1D20949A00846D79 /* UtilitiesHelper.swift in Sources */,
 				2598630E1CE95B83000A3BC3 /* Location.swift in Sources */,
 				25C42BC41D176D4700668518 /* MapsHelper.swift in Sources */,
+				256658081D3C6789009C5BD8 /* User.swift in Sources */,
 				254B94871C96260B0013ADCB /* Trip.swift in Sources */,
 				254B94851C9620DF0013ADCB /* TripsViewController.swift in Sources */,
 				2524C2A91D2A0FFA00566AAA /* FriendsViewController.swift in Sources */,
 				254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */,
+				25BBEDC01D38AA5D001009D0 /* DBHelper.swift in Sources */,
 				984F0C5E1C3C78DF00E5AE78 /* RegisterViewController.swift in Sources */,
+				2566580A1D3C8DCB009C5BD8 /* LoginHelper.swift in Sources */,
 				984F0C4E1C3C72F100E5AE78 /* SignInViewController.swift in Sources */,
 				984F0C4C1C3C72F100E5AE78 /* AppDelegate.swift in Sources */,
 				984F0C621C3C7EF900E5AE78 /* SettingsViewController.swift in Sources */,
@@ -369,6 +381,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -387,7 +400,9 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -413,6 +428,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -424,6 +440,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -436,9 +453,11 @@
 				INFOPLIST_FILE = GeoStepz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arsang.GeoStepz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Debug;
 		};
@@ -450,9 +469,11 @@
 				INFOPLIST_FILE = GeoStepz/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arsang.GeoStepz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				USER_HEADER_SEARCH_PATHS = "Pods/**";
 			};
 			name = Release;
 		};
