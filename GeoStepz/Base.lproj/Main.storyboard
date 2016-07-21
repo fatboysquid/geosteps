@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qQq-5O-dpU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F1808" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qQq-5O-dpU">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -242,11 +242,22 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="msJ-Z1-b7l"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="THX-xD-kou">
+                                <rect key="frame" x="70" y="418" width="90" height="30"/>
+                                <state key="normal" title="Show Photos"/>
+                                <connections>
+                                    <action selector="testCamera:" destination="zfO-Vk-flz" eventType="touchUpInside" id="Tdd-0p-sAd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ds1-nm-NtI">
+                                <rect key="frame" x="237" y="94" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Register" id="7dP-78-mBp"/>
                     <connections>
+                        <outlet property="imagePicked" destination="ds1-nm-NtI" id="A6W-nc-wTs"/>
                         <segue destination="dSc-pg-sOx" kind="show" id="nO1-gm-CzO"/>
                     </connections>
                 </viewController>
@@ -415,9 +426,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VN3-jE-C8o"/>
-        <segue reference="Nnd-ZI-IQv"/>
+        <segue reference="nO1-gm-CzO"/>
         <segue reference="vSC-Dp-jKI"/>
-        <segue reference="n7R-TN-NGc"/>
+        <segue reference="Icz-WC-jUX"/>
+        <segue reference="msJ-Z1-b7l"/>
     </inferredMetricsTieBreakers>
 </document>
