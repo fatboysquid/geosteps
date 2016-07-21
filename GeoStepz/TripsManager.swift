@@ -86,11 +86,14 @@ class TripsManager {
     }
 
     static func getTrips() -> [Trip]{
-        print("testtt")
         return trips
     }
 
     static func addTrip(trip: Trip) {
         trips.append(trip)
+    }
+
+    static func removeTrip(trip: Trip) {
+        trips = trips.filter() { $0 !== trip }
     }
 }

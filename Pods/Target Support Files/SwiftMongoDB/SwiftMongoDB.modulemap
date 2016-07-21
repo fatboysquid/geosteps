@@ -1,0 +1,6 @@
+framework module SwiftMongoDB {
+  umbrella header "SwiftMongoDB-umbrella.h"
+
+  export *
+  module * { export * }
+}

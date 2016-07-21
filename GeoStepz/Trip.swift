@@ -8,32 +8,100 @@
 
 import Foundation
 import CoreLocation
+import MapKit
 
 class Trip {
-    var id: String?
-    var title: String?
-    var description: String?
-    var locations: [Location]?
-    var datetime: String?
-    var comments: [String]?
-    var photos: [String]?
+    private var id: String
+    private var title: String
+    private var description: String
+    private var locations: [Location]
+    private var dateStart: NSDate
+    private var dateEnd: NSDate
+    private var comments: [String]
+    private var photos: [String]
 
     init() {
         self.id = NSUUID().UUIDString
-        self.title = ""// + self.id!
-        self.description = ""// + self.id!
-        self.locations = [Location]()
+        self.title = "New trip"
+        self.description = "Enter description"
+        self.locations = []
+        self.dateStart = NSDate()
+        self.dateEnd = NSDate()
+        self.comments = []
+        self.photos = []
     }
 
-    func getLocations() -> [Location]{
-        return locations!
+    func getId() -> String {
+        return id
     }
 
     func getTitle() -> String {
-        return title!
+        return title
+    }
+
+    func setTitle(title: String) {
+        self.title = title
+    }
+
+    func getDescription() -> String {
+        return description
+    }
+
+    func setDescription(description: String) {
+        self.description = description
+    }
+
+    func getLocations() -> [Location]{
+        return locations
     }
 
     func addLocation(location: Location) {
-        locations!.append(location)
+        locations.append(location)
+    }
+
+    func removeLocation(coordinate: CLLocationCoordinate2D) {
+        let latitude = coordinate.latitude
+        let longitude = coordinate.longitude
+
+        for i in locations {
+            let currentLocation = i.getCLLocation()[0]
+            if currentLocation.coordinate.latitude == latitude &&
+                currentLocation.coordinate.longitude == longitude {
+                locations = locations.filter() { $0.getCLLocation()[0] !== currentLocation }
+                break
+            }
+        }
+    }
+
+    func getDateStart() -> NSDate {
+        return dateStart
+    }
+
+    func setDateStart(dateStart: NSDate) {
+        self.dateStart = dateStart
+    }
+
+    func getDateEnd() -> NSDate {
+        return dateEnd
+    }
+
+    func setDateEnd(dateEnd: NSDate) {
+        self.dateEnd = dateEnd
+    }
+
+    func getComments() -> [String]{
+        return comments
+    }
+
+    func addComment(comment: String) {
+        comments.append(comment)
+    }
+
+    func getPhotos() -> [String]{
+        return photos
+    }
+
+    func addPhoto(photo: String) {
+        photos.append(photo)
     }
 }

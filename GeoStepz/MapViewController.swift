@@ -27,39 +27,27 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if (currentTrip?.getLocations().count > 1) {
             print("trip consists of \(currentTrip?.getLocations().count) locations; adding...")
 
-            //1. Create the alert controller.
-            let alert = UIAlertController(title: "Trip Saved", message: "Name your trip.", preferredStyle: .Alert)
-            
-            //2. Add the text field. You can configure it however you need.
-            alert.addTextFieldWithConfigurationHandler({ (textField) -> Void in
-                textField.text = ""
-            })
-            
-            //3. Grab the value from the text field, and print it when the user clicks OK.
+            let alert = UtilitiesHelper.getAlertInstance(self, title: "Trip Ended", message: "Name your trip.", hasTextField: true, textFieldValue: "")
             alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 let textField = alert.textFields![0] as UITextField
                 print("OK clicked.")
 
-                self.currentTrip!.title = textField.text
+                self.currentTrip!.setTitle(textField.text!)
+                self.currentTrip!.setDateEnd(NSDate())
                 TripsManager.addTrip(self.currentTrip!)
                 self.mapReset();
             }))
-
             alert.addAction(UIAlertAction(title: "Later", style: .Default, handler: { (action) -> Void in
                 print("Later clicked.")
 
-                self.currentTrip!.title = "New trip \(TripsManager.getTrips().count + 1)"
+                self.currentTrip!.setTitle("\(self.currentTrip!.getTitle()) \(TripsManager.getTrips().count + 1)")
                 TripsManager.addTrip(self.currentTrip!)
 
                 self.mapReset();
             }))
-            
-            // 4. Present the alert.
-            self.presentViewController(alert, animated: true, completion: nil)
         }
     }
 
-    //WIP: move to helper:
     func mapReset() {
         mapView.removeOverlays(mapView.overlays)
         currentTrip = nil
@@ -100,7 +88,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.mapView.delegate = self
         locationManager.distanceFilter = 15
         locationManager.requestAlwaysAuthorization()
-        view.backgroundColor = UIColor.grayColor()
+        MapsHelper.initGoogleMapsAPI(locationManager)
         stopRecordingButton.enabled = false
     }
 
@@ -119,7 +107,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
         }
     }
-    
+
+    /*
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         if beacons.count > 0 {
             print("didRangeBeacons 1")
@@ -130,7 +119,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             updateDistance(.Unknown)
         }
     }
-    
+    */
+
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         //locationManager.stopUpdatingLocation()
         print("didFailWithError")
@@ -140,9 +130,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func locationManager(manager: CLLocationManager, didUpdateLocations cllocation: [CLLocation]) {
         print("didUpdateLocations")
         let location = Location(cllocation: cllocation)
+        location.setAnnotationTitle()
         currentTrip?.addLocation(location)
         MapsHelper.focusOnUpdatedLocation(mapView, cllocation: cllocation)
-        MapsHelper.createPolyline(mapView, currentTrip: currentTrip!)
+        MapsHelper.generatePolyline(mapView, currentTrip: currentTrip!)
     }
 
     func startScanning() {
@@ -154,6 +145,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         locationManager.startRangingBeaconsInRegion(beaconRegion)
     }
 
+    /*
     func updateDistance(distance: CLProximity) {
         print("updateDistance")
         print(distance)
@@ -177,18 +169,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             }
         }
     }
+    */
 
     func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
-        guard let polyline = overlay as? MKPolyline else {
-            return MKOverlayRenderer()
-        }
-
-        let renderer = MKPolylineRenderer(polyline: polyline)
-        renderer.lineWidth = 2.0
-        renderer.alpha = 0.5
-        renderer.strokeColor = UIColor.blueColor()
-
-        return renderer
+        return MapsHelper.mkOverlayRenderer(mapView, rendererForOverlay: overlay)
     }
-
 }
