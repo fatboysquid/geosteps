@@ -22,7 +22,7 @@
 		2580EB9B1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB9A1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx */; };
 		2580EB9D1D17C95B005F9A87 /* Long Beach - Kihon.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB9C1D17C95B005F9A87 /* Long Beach - Kihon.gpx */; };
 		2598630E1CE95B83000A3BC3 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2598630D1CE95B83000A3BC3 /* Location.swift */; };
-		25BBEDC01D38AA5D001009D0 /* DBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BBEDBF1D38AA5D001009D0 /* DBHelper.swift */; };
+		25C1C73E1D52FB1B00A72D56 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25C1C73D1D52FB1B00A72D56 /* GoogleService-Info.plist */; };
 		25C42BC41D176D4700668518 /* MapsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C42BC31D176D4700668518 /* MapsHelper.swift */; };
 		25C6C2981CB48E9B009CE38F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 984F0C4F1C3C72F100E5AE78 /* Main.storyboard */; };
 		984F0C4C1C3C72F100E5AE78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 984F0C4B1C3C72F100E5AE78 /* AppDelegate.swift */; };
@@ -61,7 +61,7 @@
 		259436E01C645ED300490414 /* YourProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YourProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		259436E11C6464E700490414 /* LosAngeles.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LosAngeles.gpx; sourceTree = "<group>"; };
 		2598630D1CE95B83000A3BC3 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		25BBEDBF1D38AA5D001009D0 /* DBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBHelper.swift; sourceTree = "<group>"; };
+		25C1C73D1D52FB1B00A72D56 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		25C42BC31D176D4700668518 /* MapsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapsHelper.swift; sourceTree = "<group>"; };
 		95A7ABC62B3288969F537948 /* Pods-GeoStepz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoStepz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GeoStepz/Pods-GeoStepz.debug.xcconfig"; sourceTree = "<group>"; };
 		984F0C481C3C72F100E5AE78 /* GeoStepz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoStepz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +98,6 @@
 		255405651D1770AC003441DB /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				25BBEDBF1D38AA5D001009D0 /* DBHelper.swift */,
 				256658091D3C8DCB009C5BD8 /* LoginHelper.swift */,
 				25C42BC31D176D4700668518 /* MapsHelper.swift */,
 				25270A0E1D20949A00846D79 /* UtilitiesHelper.swift */,
@@ -137,6 +136,7 @@
 				984F0C5F1C3C7EB700E5AE78 /* MapViewController.swift */,
 				254B94841C9620DF0013ADCB /* TripsViewController.swift */,
 				257573281CB4878300B05DDD /* TripDetailViewController.swift */,
+				25C1C73D1D52FB1B00A72D56 /* GoogleService-Info.plist */,
 				259436E11C6464E700490414 /* LosAngeles.gpx */,
 				984F0C611C3C7EF900E5AE78 /* SettingsViewController.swift */,
 				2524C2A81D2A0FFA00566AAA /* FriendsViewController.swift */,
@@ -257,6 +257,7 @@
 				984F0C531C3C72F100E5AE78 /* Assets.xcassets in Resources */,
 				2580EB991D17C800005F9A87 /* Burbank - Wild Carvery.gpx in Resources */,
 				2513E8471D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx in Resources */,
+				25C1C73E1D52FB1B00A72D56 /* GoogleService-Info.plist in Resources */,
 				25C6C2981CB48E9B009CE38F /* Main.storyboard in Resources */,
 				2580EB9B1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx in Resources */,
 			);
@@ -326,7 +327,6 @@
 				254B94851C9620DF0013ADCB /* TripsViewController.swift in Sources */,
 				2524C2A91D2A0FFA00566AAA /* FriendsViewController.swift in Sources */,
 				254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */,
-				25BBEDC01D38AA5D001009D0 /* DBHelper.swift in Sources */,
 				984F0C5E1C3C78DF00E5AE78 /* RegisterViewController.swift in Sources */,
 				2566580A1D3C8DCB009C5BD8 /* LoginHelper.swift in Sources */,
 				984F0C4E1C3C72F100E5AE78 /* SignInViewController.swift in Sources */,

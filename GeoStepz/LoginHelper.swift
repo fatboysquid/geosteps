@@ -1,5 +1,6 @@
 import UIKit
 
+// file not being used currently
 class LoginHelper {
     static private var loggedIn:Bool = false
     static private var loggedInUser:User? = nil

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
@@ -26,6 +28,15 @@ class RegisterViewController: UIViewController {
                 password: passwordField.text!
             )
 
+            FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: passwordField.text!) { (user, error) in
+
+                if error == nil {
+                    print("Successfully created user!")
+                } else {
+                    print("Error creating user!")
+                }
+            }
+
             LoginHelper.logInUser(user, currentViewController: self, targetViewControllerName: "MapViewController")
         }
     }
@@ -42,10 +53,11 @@ class RegisterViewController: UIViewController {
     }
 
     func registerFormIsValid() -> Bool {
+        // TODO: real validation (if statement should return false, true for now for testing purposes)
         if emailField.text == "a" && usernameField.text == "a" && passwordField.text == "a" && passwordReentryField.text == "a" && passwordField.text == passwordReentryField.text {
             return true
         } else {
-            return false
+            return true
         }
     }
 }
