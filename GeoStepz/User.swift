@@ -22,15 +22,16 @@ class User {
     private var friends: [User]
 
     init(
+        id: String,
         username: String,
         email: String,
         password: String
     ) {
+        self.id = id
         self.username = username
         self.email = email
         self.password = password
 
-        self.id = NSUUID().UUIDString
         self.avatar = ""
         self.description = ""
         self.dateRegistered = NSDate()

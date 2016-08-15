@@ -19,14 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
-        FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
-            if let user = user {
-                print("User is signed in.")
-                print(user)
-            } else {
-                print("No user is signed in.")
-            }
-        }
 
         return true
     }

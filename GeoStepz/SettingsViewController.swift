@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class SettingsViewController: UIViewController {
     @IBAction func signOutButton(sender: UIButton) {
-        try! FIRAuth.auth()!.signOut()
+        ProfileHelper.logOutUser()
 
         let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SignInViewController")
         self.presentViewController(secondViewController!, animated: true, completion: nil)

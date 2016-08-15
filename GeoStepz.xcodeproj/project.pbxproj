@@ -16,7 +16,7 @@
 		254B94871C96260B0013ADCB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94861C96260B0013ADCB /* Trip.swift */; };
 		254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94881C962CCF0013ADCB /* TripsManager.swift */; };
 		256658081D3C6789009C5BD8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256658071D3C6789009C5BD8 /* User.swift */; };
-		2566580A1D3C8DCB009C5BD8 /* LoginHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256658091D3C8DCB009C5BD8 /* LoginHelper.swift */; };
+		2566580A1D3C8DCB009C5BD8 /* ProfileHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 256658091D3C8DCB009C5BD8 /* ProfileHelper.swift */; };
 		257573291CB4878300B05DDD /* TripDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257573281CB4878300B05DDD /* TripDetailViewController.swift */; };
 		2580EB991D17C800005F9A87 /* Burbank - Wild Carvery.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB981D17C800005F9A87 /* Burbank - Wild Carvery.gpx */; };
 		2580EB9B1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2580EB9A1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx */; };
@@ -53,7 +53,7 @@
 		254B94861C96260B0013ADCB /* Trip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		254B94881C962CCF0013ADCB /* TripsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripsManager.swift; sourceTree = "<group>"; };
 		256658071D3C6789009C5BD8 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		256658091D3C8DCB009C5BD8 /* LoginHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginHelper.swift; sourceTree = "<group>"; };
+		256658091D3C8DCB009C5BD8 /* ProfileHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHelper.swift; sourceTree = "<group>"; };
 		257573281CB4878300B05DDD /* TripDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TripDetailViewController.swift; sourceTree = "<group>"; };
 		2580EB981D17C800005F9A87 /* Burbank - Wild Carvery.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Burbank - Wild Carvery.gpx"; sourceTree = "<group>"; };
 		2580EB9A1D17C8D8005F9A87 /* Glendale - Casa de Ramos.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Glendale - Casa de Ramos.gpx"; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 		255405651D1770AC003441DB /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				256658091D3C8DCB009C5BD8 /* LoginHelper.swift */,
+				256658091D3C8DCB009C5BD8 /* ProfileHelper.swift */,
 				25C42BC31D176D4700668518 /* MapsHelper.swift */,
 				25270A0E1D20949A00846D79 /* UtilitiesHelper.swift */,
 			);
@@ -328,7 +328,7 @@
 				2524C2A91D2A0FFA00566AAA /* FriendsViewController.swift in Sources */,
 				254B94891C962CCF0013ADCB /* TripsManager.swift in Sources */,
 				984F0C5E1C3C78DF00E5AE78 /* RegisterViewController.swift in Sources */,
-				2566580A1D3C8DCB009C5BD8 /* LoginHelper.swift in Sources */,
+				2566580A1D3C8DCB009C5BD8 /* ProfileHelper.swift in Sources */,
 				984F0C4E1C3C72F100E5AE78 /* SignInViewController.swift in Sources */,
 				984F0C4C1C3C72F100E5AE78 /* AppDelegate.swift in Sources */,
 				984F0C621C3C7EF900E5AE78 /* SettingsViewController.swift in Sources */,

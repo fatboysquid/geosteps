@@ -14,11 +14,8 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBAction func loginButton(sender: UIButton) {
-        if !logIn() {
-            let alert = UtilitiesHelper.getAlertInstance(self, title: "Login Error", message: "Invalid username/password.", hasTextField: false, textFieldValue: "")
-            alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-                print("OK clicked.")
-            }))
+        if !logInFormIsValid() {
+            showLoginError("Invalid username/password.")
         } else {
             FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passwordField.text!) { (user, error) in
 
@@ -27,6 +24,7 @@ class SignInViewController: UIViewController {
                     print("Successfully sign-in user!")
                 } else {
                     print("Error signing-in user!")
+                    self.showLoginError("Error authenticating.")
                 }
             }
         }
@@ -52,13 +50,20 @@ class SignInViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func logIn() -> Bool {
+    func logInFormIsValid() -> Bool {
         // TODO: add real validation
         if emailField.text == "a" && passwordField.text == "a" {
             return true
         } else {
             return true
         }
+    }
+
+    func showLoginError(message: String) {
+        let alert = UtilitiesHelper.getAlertInstance(self, title: "Login Error", message: message, hasTextField: false, textFieldValue: "")
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            print("OK clicked.")
+        }))
     }
 
     func userAlreadySignedInRedirect() {
