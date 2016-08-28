@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -349,6 +349,23 @@
                                     <action selector="signOutButton:" destination="Dwu-P6-IqW" eventType="touchUpInside" id="tDb-QA-f89"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qft-Gy-X8R">
+                                <rect key="frame" x="20" y="78" width="90" height="30"/>
+                                <state key="normal" title="Photo Button"/>
+                                <connections>
+                                    <action selector="showPhoto:" destination="Dwu-P6-IqW" eventType="touchUpInside" id="jmP-ao-yGz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5W-oN-8ae">
+                                <rect key="frame" x="20" y="126" width="78" height="30"/>
+                                <state key="normal" title="Save Photo"/>
+                                <connections>
+                                    <action selector="savePhoto:" destination="Dwu-P6-IqW" eventType="touchUpInside" id="lGk-lB-jc6"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDa-PC-xv4">
+                                <rect key="frame" x="180" y="193" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.01982010428" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <variation key="default">
@@ -363,6 +380,9 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" id="spQ-Ds-3Hb"/>
+                    <connections>
+                        <outlet property="imagePicked" destination="KDa-PC-xv4" id="xhD-UY-nYL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EZX-YM-AcV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -754,8 +774,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="nO1-gm-CzO"/>
-        <segue reference="6zM-il-vUA"/>
+        <segue reference="Nnd-ZI-IQv"/>
         <segue reference="msJ-Z1-b7l"/>
+        <segue reference="6zM-il-vUA"/>
     </inferredMetricsTieBreakers>
 </document>
