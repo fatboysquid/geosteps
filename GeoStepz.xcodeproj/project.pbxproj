@@ -11,6 +11,7 @@
 		2513E8451D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2513E8441D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx */; };
 		2513E8471D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 2513E8461D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx */; };
 		2524C2A91D2A0FFA00566AAA /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524C2A81D2A0FFA00566AAA /* FriendsViewController.swift */; };
+		2526F4A91DBDFEAC00D7EFF6 /* FirebaseDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2526F4A81DBDFEAC00D7EFF6 /* FirebaseDBHelper.swift */; };
 		25270A0F1D20949A00846D79 /* UtilitiesHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25270A0E1D20949A00846D79 /* UtilitiesHelper.swift */; };
 		254B94851C9620DF0013ADCB /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94841C9620DF0013ADCB /* TripsViewController.swift */; };
 		254B94871C96260B0013ADCB /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254B94861C96260B0013ADCB /* Trip.swift */; };
@@ -45,6 +46,7 @@
 		2513E8441D13C2CF0082DE52 /* Studio City - Midori Sushi.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Studio City - Midori Sushi.gpx"; sourceTree = "<group>"; };
 		2513E8461D13C3CC0082DE52 /* Northridge - Gen Korean BBQ.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Northridge - Gen Korean BBQ.gpx"; sourceTree = "<group>"; };
 		2524C2A81D2A0FFA00566AAA /* FriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		2526F4A81DBDFEAC00D7EFF6 /* FirebaseDBHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseDBHelper.swift; sourceTree = "<group>"; };
 		25270A0E1D20949A00846D79 /* UtilitiesHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UtilitiesHelper.swift; sourceTree = "<group>"; };
 		2548262C1C6D987D0034F49D /* Glendale - Grand Central.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Glendale - Grand Central.gpx"; sourceTree = "<group>"; };
 		2548262D1C6D98A70034F49D /* Burbank - Granville Cafe.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Burbank - Granville Cafe.gpx"; sourceTree = "<group>"; };
@@ -98,8 +100,9 @@
 		255405651D1770AC003441DB /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				256658091D3C8DCB009C5BD8 /* ProfileHelper.swift */,
+				2526F4A81DBDFEAC00D7EFF6 /* FirebaseDBHelper.swift */,
 				25C42BC31D176D4700668518 /* MapsHelper.swift */,
+				256658091D3C8DCB009C5BD8 /* ProfileHelper.swift */,
 				25270A0E1D20949A00846D79 /* UtilitiesHelper.swift */,
 			);
 			name = helpers;
@@ -293,7 +296,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run \'pod install\' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B1018F6018B5FD623549C5EB /* [CP] Copy Pods Resources */ = {
@@ -318,6 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2526F4A91DBDFEAC00D7EFF6 /* FirebaseDBHelper.swift in Sources */,
 				257573291CB4878300B05DDD /* TripDetailViewController.swift in Sources */,
 				25270A0F1D20949A00846D79 /* UtilitiesHelper.swift in Sources */,
 				2598630E1CE95B83000A3BC3 /* Location.swift in Sources */,

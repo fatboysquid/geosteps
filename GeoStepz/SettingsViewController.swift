@@ -10,6 +10,7 @@ import UIKit
 import Photos
 import Firebase
 import FirebaseAuth
+import FirebaseStorage
 
 class SettingsViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -18,14 +19,9 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     
     var images:NSMutableArray! // <-- Array to hold the fetched images
     var totalImageCountNeeded:Int!
-    
-    
-    
-    @IBAction func signOutButton(sender: UIButton) {
-        ProfileHelper.logOutUser()
 
-        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("SignInViewController")
-        self.presentViewController(secondViewController!, animated: true, completion: nil)
+    @IBAction func signOutButton(sender: UIButton) {
+        ProfileHelper.logOutUser(self)
     }
     
     override func viewDidLoad() {
@@ -51,7 +47,7 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             let imageUrl = info["UIImagePickerControllerReferenceURL"] as! NSURL
-            let asset = PHAsset.fetchAssetsWithALAssetURLs([imageUrl], options: nil).firstObject as! PHAsset
+            //let asset = PHAsset.fetchAssetsWithALAssetURLs([imageUrl], options: nil).firstObject as! PHAsset
             imagePicked.image = pickedImage
         }
         
@@ -72,11 +68,11 @@ class SettingsViewController: UIViewController, UIImagePickerControllerDelegate,
         // the requestImageForAsset will return both the image
         // and thumbnail; by setting synchronous to true it
         // will return just the thumbnail
-        var requestOptions = PHImageRequestOptions()
+        let requestOptions = PHImageRequestOptions()
         requestOptions.synchronous = true
         
         // Sort the images by creation date
-        var fetchOptions = PHFetchOptions()
+        let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [NSSortDescriptor(key:"creationDate", ascending: true)]
         
         if let fetchResult: PHFetchResult = PHAsset.fetchAssetsWithMediaType(PHAssetMediaType.Image, options: fetchOptions) {

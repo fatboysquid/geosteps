@@ -28,7 +28,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if (currentTrip?.getLocations().count > 1) {
             print("trip consists of \(currentTrip?.getLocations().count) locations; adding...")
 
-            let alert = UtilitiesHelper.getAlertInstance(self, title: "Trip Ended", message: "Name your trip.", hasTextField: true, textFieldValue: "")
+            let alert = UtilitiesHelper.getAlertInstance(self, title: "Trip Ended", message: "Name your trip.", hasTextField: true, textFieldValue: "", type: "custom")
             alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
                 let textField = alert.textFields![0] as UITextField
                 print("OK clicked.")

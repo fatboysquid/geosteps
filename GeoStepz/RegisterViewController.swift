@@ -18,27 +18,9 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var passwordReentryField: UITextField!
     @IBAction func registerButton(sender: UIButton) {
         if !registerFormIsValid() {
-            showRegisterError("Invalid registration information provided.")
+            UtilitiesHelper.getAlertInstance(self, title: "Register Error", message: "Invalid registration information provided.", hasTextField: false, textFieldValue: "", type: "ok")
         } else {
-            FIRAuth.auth()?.createUserWithEmail(emailField.text!, password: passwordField.text!) { (user, error) in
-
-                if error == nil {
-                    print("Successfully created user!")
-
-                    let user:User = User(
-                        id: user!.uid,
-                        username: self.usernameField.text!,
-                        email: self.emailField.text!,
-                        password: self.passwordField.text!
-                    )
-
-                    ProfileHelper.registerUser(user)
-                    ProfileHelper.logInUser(user, currentViewController: self)
-                } else {
-                    print("Error creating user!")
-                    self.showRegisterError("Error authenticating.")
-                }
-            }
+            ProfileHelper.registerUser(self, email: emailField.text!, username: usernameField.text!, password: passwordField.text!)
         }
     }
 
@@ -60,13 +42,6 @@ class RegisterViewController: UIViewController {
         } else {
             return true
         }
-    }
-
-    func showRegisterError(message: String) {
-        let alert = UtilitiesHelper.getAlertInstance(self, title: "Register Error", message: message, hasTextField: false, textFieldValue: "")
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            print("OK clicked.")
-        }))
     }
 }
 

@@ -18,7 +18,7 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var tripNameButton: UIButton!
     @IBAction func tripNameButton(sender: AnyObject) {
-        let alert = UtilitiesHelper.getAlertInstance(self, title: "Name", message: "", hasTextField: true, textFieldValue: currentTrip!.getTitle())
+        let alert = UtilitiesHelper.getAlertInstance(self, title: "Name", message: "", hasTextField: true, textFieldValue: currentTrip!.getTitle(), type: "custom")
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             let textField = alert.textFields![0] as UITextField
             print("OK clicked.")
@@ -33,14 +33,11 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
     @IBOutlet weak var tripDateButton: UIButton!
     @IBAction func tripDateButton(sender: AnyObject) {
         let dateString = "\(currentTrip!.getDateStart()) - \(currentTrip!.getDateEnd())"
-        let alert = UtilitiesHelper.getAlertInstance(self, title: "Date", message: dateString, hasTextField: false, textFieldValue: "")
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            print("OK clicked.")
-        }))
+        let alert = UtilitiesHelper.getAlertInstance(self, title: "Date", message: dateString, hasTextField: false, textFieldValue: "", type: "ok")
     }
     @IBOutlet weak var tripDescriptionButton: UIButton!
     @IBAction func tripDescriptionButton(sender: AnyObject) {
-        let alert = UtilitiesHelper.getAlertInstance(self, title: "Description", message: "", hasTextField: true, textFieldValue: currentTrip!.getDescription())
+        let alert = UtilitiesHelper.getAlertInstance(self, title: "Description", message: "", hasTextField: true, textFieldValue: currentTrip!.getDescription(), type: "custom")
         alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
             let textField = alert.textFields![0] as UITextField
             print("OK clicked.")
@@ -98,7 +95,7 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
         print("annotation tapped")
         let annotation = view.annotation
 
-        let alert = UtilitiesHelper.getAlertInstance(self, title: "Delete location?", message: "", hasTextField: false, textFieldValue: "")
+        let alert = UtilitiesHelper.getAlertInstance(self, title: "Delete location?", message: "", hasTextField: false, textFieldValue: "", type: "custom")
         alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) -> Void in
             print("Yes clicked.")
 
@@ -119,7 +116,7 @@ class TripDetailViewController: UIViewController, CLLocationManagerDelegate, MKM
 
     //TODO: probably move this into the Trip.swift or TripsManager.swift file
     func deleteTrip() {
-        let alert = UtilitiesHelper.getAlertInstance(self, title: "Delete", message: "Trip will be deleted. Are you sure?", hasTextField: false, textFieldValue: "")
+        let alert = UtilitiesHelper.getAlertInstance(self, title: "Delete", message: "Trip will be deleted. Are you sure?", hasTextField: false, textFieldValue: "", type: "custom")
         alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { (action) -> Void in
             print("Yes clicked.")
             TripsManager.removeTrip(self.currentTrip!)

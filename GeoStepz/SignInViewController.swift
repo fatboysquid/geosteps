@@ -15,18 +15,9 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBAction func loginButton(sender: UIButton) {
         if !logInFormIsValid() {
-            showLoginError("Invalid username/password.")
+            UtilitiesHelper.getAlertInstance(self, title: "Login Error", message: "Invalid username or password.", hasTextField: false, textFieldValue: "", type: "ok")
         } else {
-            FIRAuth.auth()?.signInWithEmail(emailField.text!, password: passwordField.text!) { (user, error) in
-
-                if error == nil {
-                    self.userAlreadySignedInRedirect()
-                    print("Successfully sign-in user!")
-                } else {
-                    print("Error signing-in user!")
-                    self.showLoginError("Error authenticating.")
-                }
-            }
+            ProfileHelper.logInUser(self, email: emailField.text!, password: passwordField.text!)
         }
     }
 
@@ -35,9 +26,16 @@ class SignInViewController: UIViewController {
 
         FIRAuth.auth()?.addAuthStateDidChangeListener { auth, user in
             if let user = user {
+                //Dev-friendly behavior forces logout if already logged in for easy debugging
+                //print(user)
+                //ProfileHelper.logOutUser(self)
+                //self.passwordField.secureTextEntry = true
+                ///*
                 // User is signed in.
                 print(user)
-                self.userAlreadySignedInRedirect()
+                ProfileHelper.setLoggedInVariables(user)
+                ProfileHelper.redirectSignedInUser(self)
+                //*/
             } else {
                 // No user is signed in.
                 self.passwordField.secureTextEntry = true
@@ -57,18 +55,6 @@ class SignInViewController: UIViewController {
         } else {
             return true
         }
-    }
-
-    func showLoginError(message: String) {
-        let alert = UtilitiesHelper.getAlertInstance(self, title: "Login Error", message: message, hasTextField: false, textFieldValue: "")
-        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
-            print("OK clicked.")
-        }))
-    }
-
-    func userAlreadySignedInRedirect() {
-        let secondViewController = self.storyboard?.instantiateViewControllerWithIdentifier("UITabBarControllerMain") as! UITabBarController
-        self.presentViewController(secondViewController, animated: true, completion: nil)
     }
 }
 

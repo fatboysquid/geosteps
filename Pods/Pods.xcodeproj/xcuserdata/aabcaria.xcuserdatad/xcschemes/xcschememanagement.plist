@@ -24,45 +24,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SwiftMongoDB.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>mongo-c-driver.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0166BF69D444EA915F2C3987532D1264</key>
+		<key>44CAD6CE523055ED339E87154473A254</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0EB19C1377A747F81110D44E2D5FCF78</key>
+		<key>4E56E45F5B3E296B15DF2C471C1BCB98</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6898EAAC425B25E0C580D20645221C75</key>
+		<key>5D9E2EE705789A7422BAC96A2942330B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6EDC37F3FA92533C6AC3562458AA91F1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>819F47FB876EA8FAD964422289CCCCFC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9D0F2E5EA1B46A5D72FFD42B0B39DBBC</key>
+		<key>BC5000D645EEAF961C85907CDC796FE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
