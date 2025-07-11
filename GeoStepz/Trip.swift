@@ -63,13 +63,12 @@ class Trip {
         let latitude = coordinate.latitude
         let longitude = coordinate.longitude
 
-        for i in locations {
-            let currentLocation = i.getCLLocation()[0]
-            if currentLocation.coordinate.latitude == latitude &&
-                currentLocation.coordinate.longitude == longitude {
-                locations = locations.filter() { $0.getCLLocation()[0] !== currentLocation }
-                break
-            }
+        if let index = locations.firstIndex(where: { location in
+            let currentLocation = location.getCLLocation()[0]
+            return currentLocation.coordinate.latitude == latitude &&
+                   currentLocation.coordinate.longitude == longitude
+        }) {
+            locations.remove(at: index)
         }
     }
 
